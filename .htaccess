@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  # 开启apache的URL重写机制
+  RewriteEngine On
+
+  # 请求的资源不是目录
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # 请求的资源不是文件(请求的资源不存在)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  # 重写规则
+  RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>

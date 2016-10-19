@@ -1,0 +1,160 @@
+[ 2016-10-10T17:16:27+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/Test/member/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+
+[ 2016-10-10T21:35:48+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+
+[ 2016-10-10T21:36:04+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input/name/hell
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+
+[ 2016-10-10T21:36:49+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+
+[ 2016-10-10T21:37:23+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+
+[ 2016-10-10T21:37:53+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-10-10T21:37:54+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000992s ]
+
+[ 2016-10-10T21:37:55+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+
+[ 2016-10-10T21:37:57+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+
+[ 2016-10-10T21:38:00+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+
+[ 2016-10-10T21:38:04+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input/name/hell
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+
+[ 2016-10-10T21:38:08+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+
+[ 2016-10-10T21:38:18+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-10-10T21:39:17+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+
+[ 2016-10-10T21:39:18+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+
+[ 2016-10-10T21:39:18+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-10-10T21:39:18+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+
+[ 2016-10-10T21:39:19+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+
+[ 2016-10-10T21:39:19+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+
+[ 2016-10-10T21:39:19+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+
+[ 2016-10-10T21:39:19+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+
+[ 2016-10-10T21:40:40+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+
+[ 2016-10-10T21:40:54+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+
+[ 2016-10-10T21:41:34+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+
+[ 2016-10-10T21:41:51+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input/name/Hello%3EscriptPHP
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+
+[ 2016-10-10T21:41:59+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input/name/Hello%3EscriptPHP
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-10-10T21:42:57+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/input
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-10-10T22:52:49+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/xxx
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+
+[ 2016-10-10T22:55:09+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/xx/hello
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-10-10T22:57:05+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/world
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+
+[ 2016-10-10T22:59:39+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/world
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+
+[ 2016-10-10T22:59:49+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/test.php/test/site/world
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+

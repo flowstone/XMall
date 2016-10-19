@@ -1,0 +1,58 @@
+[ 2016-10-19T14:15:55+08:00 ] ::1 /ITBull/BuyPlus/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003206s ]
+
+[ 2016-10-19T14:16:13+08:00 ] ::1 /ITBull/BuyPlus/member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+ERR: 非法操作:index
+
+[ 2016-10-19T14:18:04+08:00 ] ::1 /ITBull/BuyPlus/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+ERR: 无法加载控制器:Home
+
+[ 2016-10-19T14:18:13+08:00 ] ::1 /ITBull/BuyPlus/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+ERR: 无法加载控制器:Home
+
+[ 2016-10-19T14:18:21+08:00 ] ::1 /ITBull/BuyPlus/index.php/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+
+[ 2016-10-19T14:18:40+08:00 ] ::1 /ITBull/BuyPlus/index.php/member/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+ERR: 非法操作:index
+
+[ 2016-10-19T14:18:44+08:00 ] ::1 /ITBull/BuyPlus/index.php/member/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+ERR: 非法操作:index
+
+[ 2016-10-19T14:19:06+08:00 ] ::1 /ITBull/BuyPlus/index.php/back/member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+ERR: 无法加载控制器:Back
+
+[ 2016-10-19T14:19:36+08:00 ] ::1 /ITBull/BuyPlus/index.php/back/member/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+ERR: 无法加载控制器:Back
+
+[ 2016-10-19T14:19:41+08:00 ] ::1 /ITBull/BuyPlus/index.php/member/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+ERR: 非法操作:list
+

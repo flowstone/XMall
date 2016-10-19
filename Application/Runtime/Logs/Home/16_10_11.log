@@ -1,0 +1,165 @@
+[ 2016-10-11T00:20:33+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+
+[ 2016-10-11T00:20:34+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-11T00:20:35+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+
+[ 2016-10-11T00:21:04+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+
+[ 2016-10-11T00:21:07+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+
+[ 2016-10-11T00:21:07+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-11T00:21:08+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+
+[ 2016-10-11T00:21:10+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/verify.html?0.6113788088750369
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+
+[ 2016-10-11T00:21:11+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/verify.html?0.34996034090590267
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+
+[ 2016-10-11T00:21:11+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/verify.html?0.812432881424668
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+
+[ 2016-10-11T12:22:28+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018412s ]
+
+[ 2016-10-11T12:22:52+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+
+[ 2016-10-11T12:22:53+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-11T12:22:54+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+
+[ 2016-10-11T12:22:57+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/Public/Home/image/catalog/cart.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+
+[ 2016-10-11T12:24:03+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+
+[ 2016-10-11T12:24:04+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000760s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-11T12:26:30+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-10-11T12:26:30+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+
+[ 2016-10-11T12:26:45+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-10-11T12:26:45+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-11T12:26:45+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+
+[ 2016-10-11T12:27:15+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002012s ]
+
+[ 2016-10-11T12:27:15+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+
+[ 2016-10-11T15:50:42+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002375s ]
+ERR: 无法加载控制器:List
+
+[ 2016-10-11T15:50:53+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+ERR: 非法操作:index
+
+[ 2016-10-11T15:51:07+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/back
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+ERR: 无法加载控制器:Back
+
+[ 2016-10-11T15:57:02+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/back/member
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001294s ]
+ERR: 无法加载控制器:Back
+
+[ 2016-10-11T16:39:37+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+
+[ 2016-10-11T16:39:38+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-11T16:39:38+08:00 ] ::1 /ITBull/BigBull_03/thinkphp3.2/index.php/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+
