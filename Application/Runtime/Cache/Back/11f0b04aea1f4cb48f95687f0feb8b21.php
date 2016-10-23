@@ -532,9 +532,23 @@
     <div class="page-header">
       <div class="container-fluid">
         <div class="pull-right">
-          <a href="<?php echo U('Back/Member/add');?>" data-toggle="tooltip" title="新增" class="btn btn-primary">
+          <a href="<?php echo U('add');?>" data-toggle="tooltip" title="新增" class="btn btn-primary">
             <i class="fa fa-plus"></i>
           </a>
+          <button type="button" data-toggle="tooltip" title="发送邮件" class="btn btn-primary" onclick="return submitMail();">
+            <i class="glyphicon glyphicon-envelope"></i>
+          </button>
+          <script type="text/javascript">
+            function submitMail() {
+              if (window.confirm('确认？')) {
+                $('#input-operate_type').val('mail');
+                $('#form-member').submit();
+                return true;
+              } else {
+                return false;
+              }
+            }
+          </script>
           <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-product').submit() : false;">
             <i class="fa fa-trash-o"></i>
           </button>
@@ -589,7 +603,8 @@
               </div>
             </div>
           </div> -->
-          <form action="" method="post" enctype="multipart/form-data" id="form-product">
+          <form action="<?php echo U('multi');?>" method="post" enctype="multipart/form-data" id="form-member">
+            <input type="hidden" id="input-operate_type" name="operate_type" value="">
             <div class="table-responsive">
               <table class="table table-bordered table-hover">
                 <thead>
