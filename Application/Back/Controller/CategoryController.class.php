@@ -14,7 +14,8 @@ class CategoryController extends Controller{
 
     public function listAction(){
             $m_category = D('Category');
-            $this->assign('rows',$m_category->getTreeList());
+            $rows = $m_category->getTreeList();
+            $this->assign('rows',$rows);
 
             $this->display();
     }
