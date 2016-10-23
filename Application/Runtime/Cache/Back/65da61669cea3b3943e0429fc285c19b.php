@@ -535,31 +535,17 @@
           <a href="<?php echo U('add');?>" data-toggle="tooltip" title="新增" class="btn btn-primary">
             <i class="fa fa-plus"></i>
           </a>
-          <button type="button" data-toggle="tooltip" title="发送邮件" class="btn btn-primary" onclick="return submitMail();">
-            <i class="glyphicon glyphicon-envelope"></i>
-          </button>
-          <script type="text/javascript">
-            function submitMail() {
-              if (window.confirm('确认？')) {
-                $('#input-operate_type').val('mail');
-                $('#form-member').submit();
-                return true;
-              } else {
-                return false;
-              }
-            }
-          </script>
           <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-product').submit() : false;">
             <i class="fa fa-trash-o"></i>
           </button>
         </div>
-        <h1>会员管理</h1>
+        <h1>分类管理</h1>
         <ul class="breadcrumb">
           <li>
             <a href="{U('Manage/index')}">首页</a>
           </li>
           <li>
-            <a href="javascript:;">会员列表</a>
+            <a href="javascript:;">分类列表</a>
           </li>
         </ul>
       </div>
@@ -569,7 +555,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">
             <i class="fa fa-list"></i>
-            会员列表
+            分类列表
           </h3>
         </div>
         <div class="panel-body">
@@ -603,8 +589,7 @@
               </div>
             </div>
           </div> -->
-          <form action="<?php echo U('multi');?>" method="post" enctype="multipart/form-data" id="form-member">
-            <input type="hidden" id="input-operate_type" name="operate_type" value="">
+          <form action="" method="post" enctype="multipart/form-data" id="form-product">
             <div class="table-responsive">
               <table class="table table-bordered table-hover">
                 <thead>
@@ -612,18 +597,18 @@
                     <td style="width: 1px;" class="text-center">
                       <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" />
                     </td>
+                    <td class="text-left">
+                      <a href="" class="asc">分类</a>
+                    </td>
                     <td class="text-center"></td>
-                    <td class="text-left">
-                      <a href="" class="asc">会员</a>
-                    </td>
-                    <td class="text-left">
-                      <a href="">Email</a>
+                    <td class="text-right">
+                      <a href="" class="desc">排序</a>
                     </td>
                     <td class="text-right">
-                      <a href="" class="desc">电话</a>
+                      <a href="">启用否</a>
                     </td>
                     <td class="text-right">
-                      <a href="">订阅否</a>
+                      <a href="">导航否</a>
                     </td>
                     
                     <td class="text-right">管理</td>
@@ -632,21 +617,27 @@
                 <tbody>
                 <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i;?><tr>
                     <td class="text-center">
-                      <input type="checkbox" name="selected[]" value="<?php echo ($row['member_id']); ?>" />
+                      <input type="checkbox" name="selected[]" value="<?php echo ($row['category_id']); ?>" />
+                    </td>
+                    <td class="text-left">
+                      <?php echo str_repeat('&nbsp;',$row['deep']*8); echo ($row['title']); ?>
                     </td>
                     <td class="text-center">
                       <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/avatar.png" alt="HEAD" class="img-thumbnail" style="max-width: 40px"/>
                     </td>
-                    <td class="text-left"><?php echo ($row['name']); ?></td>
-                    <td class="text-left"><?php echo ($row['email']); ?></td>
-                    <td class="text-right"><?php echo ($row['telephone']); ?></td>
+                    <td class="text-right"><?php echo ($row['sort_number']); ?></td>
                     <td class="text-right">
-                    <?php if($row['is_newsletter'] == '1'): ?>是
+                    <?php if($row['is_used'] == '1'): ?>是
                     <?php else: ?>
                     否<?php endif; ?>
                     </td>
                     <td class="text-right">
-                      <a href="<?php echo U('Back/Member/edit', ['member_id'=>$row['member_id']]);?>" data-toggle="tooltip" title="编辑" class="btn btn-primary">
+                      <?php if($row['is_nav'] == '1'): ?>是
+                        <?php else: ?>
+                        否<?php endif; ?>
+                    </td>
+                    <td class="text-right">
+                      <a href="<?php echo U('edit', ['category_id'=>$row['category_id']]);?>" data-toggle="tooltip" title="编辑" class="btn btn-primary">
                         <i class="fa fa-pencil"></i>
                       </a>
                   </td>
