@@ -22,10 +22,10 @@
         <meta name="keywords" content= "BuyPlus(败家Shopping）" />
       
 
-      <link href="/ITBull/BigBull_03/thinkphp3.2/Public/Home/image/catalog/cart.png" rel="icon" />
-      <link href="/ITBull/BigBull_03/thinkphp3.2/Public/Home/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-      <link href="/ITBull/BigBull_03/thinkphp3.2/Public/Home/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-      <link href="/ITBull/BigBull_03/thinkphp3.2/Public/Home/stylesheet/stylesheet.css" rel="stylesheet">
+      <link href="/GitRepository/GitHub/BuyPlus/Public/Home/image/catalog/cart.png" rel="icon" />
+      <link href="/GitRepository/GitHub/BuyPlus/Public/Home/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+      <link href="/GitRepository/GitHub/BuyPlus/Public/Home/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+      <link href="/GitRepository/GitHub/BuyPlus/Public/Home/stylesheet/stylesheet.css" rel="stylesheet">
 
       
 </head>
@@ -81,7 +81,7 @@
             <div class="col-sm-4">
               <div id="logo">
                 <a href="">
-                  <img src="/ITBull/BigBull_03/thinkphp3.2/Public/Home/image/logo3.png" title="BuyPlus(败家Shopping）" alt="BuyPlus(败家Shopping）" class="img-responsive" />
+                  <img src="/GitRepository/GitHub/BuyPlus/Public/Home/image/logo3.png" title="BuyPlus(败家Shopping）" alt="BuyPlus(败家Shopping）" class="img-responsive" />
                 </a>
               </div>
             </div>
@@ -420,9 +420,9 @@
         </div>
       </footer>
 
-      <script src="/ITBull/BigBull_03/thinkphp3.2/Public/Home/javascript/jquery-1.11.3.min.js" type="text/javascript"></script>
-      <script src="/ITBull/BigBull_03/thinkphp3.2/Public/Home/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-      <script src="/ITBull/BigBull_03/thinkphp3.2/Public/Home/javascript/common.js" type="text/javascript"></script>
+      <script src="/GitRepository/GitHub/BuyPlus/Public/Home/javascript/jquery-1.11.3.min.js" type="text/javascript"></script>
+      <script src="/GitRepository/GitHub/BuyPlus/Public/Home/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/GitRepository/GitHub/BuyPlus/Public/Home/javascript/common.js" type="text/javascript"></script>
       
 <script type="text/javascript">
 	(function(){

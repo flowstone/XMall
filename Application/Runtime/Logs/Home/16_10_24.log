@@ -1,0 +1,184 @@
+[ 2016-10-24T17:07:14+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+
+[ 2016-10-24T17:17:34+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/member/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-10-24T17:17:35+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:17:35+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+
+[ 2016-10-24T17:17:35+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/image/catalog/cart.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-10-24T17:17:38+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-10-24T17:17:38+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:18:28+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+
+[ 2016-10-24T17:18:32+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2016-10-24T17:18:32+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:20:57+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+
+[ 2016-10-24T17:20:57+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+
+[ 2016-10-24T17:21:01+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-10-24T17:21:01+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:22:35+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001085s ]
+
+[ 2016-10-24T17:22:38+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001057s ]
+
+[ 2016-10-24T17:22:38+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000777s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:23:50+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-10-24T17:23:51+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-10-24T17:23:53+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+
+[ 2016-10-24T17:23:53+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:24:15+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-10-24T17:24:15+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-10-24T17:24:28+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+
+[ 2016-10-24T17:24:28+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:24:47+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+
+[ 2016-10-24T17:24:47+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+
+[ 2016-10-24T17:25:04+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+
+[ 2016-10-24T17:25:04+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:25:30+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000973s ]
+
+[ 2016-10-24T17:25:30+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+
+[ 2016-10-24T17:25:31+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-10-24T17:25:31+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/Public/Home/owl-carousel/owl.transitions.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000935s ]
+ERR: 无法加载控制器:Public
+
+[ 2016-10-24T17:25:58+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+
+[ 2016-10-24T17:25:58+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/index.php/center.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+

@@ -1,0 +1,255 @@
+[ 2016-10-24T15:06:46+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001981s ]
+
+[ 2016-10-24T15:07:02+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+
+[ 2016-10-24T15:07:12+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+
+[ 2016-10-24T15:07:13+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000972s ]
+
+[ 2016-10-24T17:04:47+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+
+[ 2016-10-24T17:04:50+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+
+[ 2016-10-24T17:04:55+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-10-24T17:05:03+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+
+[ 2016-10-24T17:05:08+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+
+[ 2016-10-24T17:05:10+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+
+[ 2016-10-24T17:05:14+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+
+[ 2016-10-24T17:05:17+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-10-24T17:05:21+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000750s ]
+
+[ 2016-10-24T17:05:37+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001307s ]
+
+[ 2016-10-24T17:06:29+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001211s ]
+
+[ 2016-10-24T17:06:31+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-10-24T17:06:33+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-10-24T17:06:35+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+
+[ 2016-10-24T17:06:37+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+
+[ 2016-10-24T17:07:18+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-10-24T17:07:24+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001096s ]
+
+[ 2016-10-24T17:17:11+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+
+[ 2016-10-24T17:26:05+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+
+[ 2016-10-24T17:26:08+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+
+[ 2016-10-24T17:26:09+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-10-24T17:26:11+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+
+[ 2016-10-24T17:26:13+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+
+[ 2016-10-24T17:26:16+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+
+[ 2016-10-24T17:26:18+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+
+[ 2016-10-24T17:26:19+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-10-24T17:26:21+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+
+[ 2016-10-24T17:26:22+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Member/list/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+
+[ 2016-10-24T17:26:30+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001090s ]
+
+[ 2016-10-24T17:26:41+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+
+[ 2016-10-24T19:05:25+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2016-10-24T19:05:34+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-10-24T19:05:44+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+
+[ 2016-10-24T19:05:46+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+
+[ 2016-10-24T19:05:48+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001527s ]
+
+[ 2016-10-24T19:05:53+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+
+[ 2016-10-24T19:05:58+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000935s ]
+
+[ 2016-10-24T19:08:17+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/category/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-10-24T19:08:20+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-10-24T19:08:23+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+
+[ 2016-10-24T19:08:25+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-10-24T19:08:28+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001795s ]
+
+[ 2016-10-24T19:08:30+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+
+[ 2016-10-24T19:08:32+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+
+[ 2016-10-24T19:08:34+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+
+[ 2016-10-24T19:08:46+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/member/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000949s ]
+
+[ 2016-10-24T19:08:51+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+

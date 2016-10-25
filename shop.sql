@@ -1,7 +1,7 @@
 -- 创建数据库
 CREATE DATABASE buyplus CHARSET=UTF8;
 
---创建会员表
+-- 创建会员表
 CREATE TABLE yao_member
 (
     member_id INT UNSIGNED AUTO_INCREMENT,
@@ -59,7 +59,7 @@ CREATE TABLE member_register_log();
 
 
 
---创建分类表
+-- 创建分类表
 CREATE TABLE yao_category(
     category_id INT UNSIGNED AUTO_INCREMENT,
     title VARCHAR(32) NOT NULL DEFAULT '',
