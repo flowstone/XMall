@@ -93,12 +93,21 @@
                     <td class="text-center">
                       <input type="checkbox" name="selected[]" value="{$row['category_id']}" />
                     </td>
+<<<<<<< HEAD
                     <td class="text-left">{:str_repeat('&nbsp;', $row['deep']*8)}{$row['title']}</td>
+=======
+                    <td class="text-left">
+                      {:str_repeat('&nbsp;',$row['deep']*8)}{$row['title']}
+                    </td>
+>>>>>>> dev
                     <td class="text-center">
                       <img src="__PUBLIC__/Back/image/avatar.png" alt="HEAD" class="img-thumbnail" style="max-width: 40px"/>
                     </td>
                     <td class="text-right">{$row['sort_number']}</td>
+<<<<<<< HEAD
                    
+=======
+>>>>>>> dev
                     <td class="text-right">
                     <if condition="$row['is_used'] eq '1'" >
                     是
@@ -107,11 +116,19 @@
                     </if>
                     </td>
                     <td class="text-right">
+<<<<<<< HEAD
                     <if condition="$row['is_nav'] eq '1'" >
                     是
                     <else />
                     否
                     </if>
+=======
+                      <if condition="$row['is_nav'] eq '1'" >
+                        是
+                        <else />
+                        否
+                      </if>
+>>>>>>> dev
                     </td>
                     <td class="text-right">
                       <a href="{:U('edit', ['category_id'=>$row['category_id']])}" data-toggle="tooltip" title="编辑" class="btn btn-primary">
@@ -145,9 +162,17 @@
             </ul>
           </div>
           <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
+<<<<<<< HEAD
         </div> -->
+=======
+        </div>-->
+>>>>>>> dev
       </div>
     </div>
   </div>
   </div>
+<<<<<<< HEAD
 </block>
+=======
+</block>
+>>>>>>> dev

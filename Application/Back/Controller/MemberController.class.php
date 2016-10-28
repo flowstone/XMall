@@ -44,4 +44,27 @@ class MemberController extends Controller{
         // 展示分页列表
         $this->display();
     }
+
+    //队列
+    public function multiAction(){
+        //获取操作类型
+        $operate_type = I('post.operate_type', 'delete');
+
+        //获取所有会员的ID
+        $selected = I('post.selected', []);
+
+        //依据操作类型，执行不同的操作
+        switch ($operate_type) {
+            case 'mail':
+                //批量发送邮件
+                //将任务加入队列
+                $redis = new \Redis;
+                $redis->connect('127.0.0.1', '6379');
+                foreach ($selected as $member_id) {
+                    $redis->lPush('member_list', $member_id);
+                }
+                break;
+        }
+        $this->success('已经加入邮件发送队列，执行其他操作即可', U('list'));
+    }
 }

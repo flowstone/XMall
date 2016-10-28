@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html dir="ltr" lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <title>控制面板</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <link href="__PUBLIC__/Back/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
-  <link href="__PUBLIC__/Back/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-  <link href="__PUBLIC__/Back/summernote/summernote.css" rel="stylesheet" />
-  <link href="__PUBLIC__/Back/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" />
-  <link type="text/css" href="__PUBLIC__/Back/stylesheet/stylesheet.css" rel="stylesheet" media="screen" />
+  <link href="/GitRepository/GitHub/BuyPlus/Public/Back/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
+  <link href="/GitRepository/GitHub/BuyPlus/Public/Back/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+  <link href="/GitRepository/GitHub/BuyPlus/Public/Back/summernote/summernote.css" rel="stylesheet" />
+  <link href="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/GitRepository/GitHub/BuyPlus/Public/Back/stylesheet/stylesheet.css" rel="stylesheet" media="screen" />
   
   
 </head>
@@ -20,7 +20,7 @@
         <a type="button" id="button-menu" class="pull-left"> <i class="fa fa-indent fa-lg"></i>
         </a>
         <a href="" class="navbar-brand">
-          <img src="__PUBLIC__/Back/image/logo.png" alt="OpenCart" title="OpenCart" />
+          <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/logo.png" alt="OpenCart" title="OpenCart" />
         </a>
       </div>
       <ul class="nav pull-right">
@@ -127,7 +127,7 @@
         <div>
           <!-- <i class="fa fa-opencart"></i>
         -->
-        <img src="__PUBLIC__/Back/image/avatar.png" style="max-width:42px; max-height: 42px;" ></div>
+        <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/avatar.png" style="max-width:42px; max-height: 42px;" ></div>
       <div>
         <h4>HelloKang</h4>
         <small>Administrator</small>
@@ -147,7 +147,7 @@
         </a>
         <ul>
           <li>
-            <a href="{:U('/Category/list')}">商品分类</a>
+            <a href="<?php echo U('/Category/list');?>">商品分类</a>
           </li>
           <li>
             <a href="">商品管理</a>
@@ -527,8 +527,161 @@
   </nav>
 
   
-  <block name="content">
-  </block>
+  
+  <div id="content">
+    <div class="page-header">
+      <div class="container-fluid">
+        <div class="pull-right">
+          <a href="<?php echo U('add');?>" data-toggle="tooltip" title="新增" class="btn btn-primary">
+            <i class="fa fa-plus"></i>
+          </a>
+          <button type="button" data-toggle="tooltip" title="发送邮件" class="btn btn-primary" onclick="return submitMail();">
+            <i class="glyphicon glyphicon-envelope"></i>
+          </button>
+          <script type="text/javascript">
+            function submitMail() {
+              if (window.confirm('确认？')) {
+                $('#input-operate_type').val('mail');
+                $('#form-member').submit();
+                return true;
+              } else {
+                return false;
+              }
+            }
+          </script>
+          <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-product').submit() : false;">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </div>
+        <h1>会员管理</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a href="{U('Manage/index')}">首页</a>
+          </li>
+          <li>
+            <a href="javascript:;">会员列表</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <i class="fa fa-list"></i>
+            会员列表
+          </h3>
+        </div>
+        <div class="panel-body">
+          <!-- <div class="well">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label class="control-label" for="input-name">商品名称</label>
+                  <input type="text" name="filter_name" value="" placeholder="商品名称" id="input-name" class="form-control" />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label class="control-label" for="input-price">销售价格</label>
+                  <input type="text" name="filter_price" value="" placeholder="销售价格" id="input-price" class="form-control" />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label class="control-label" for="input-status">状态</label>
+                  <select name="filter_status" id="input-status" class="form-control">
+                    <option value="*"></option>
+                    <option value="1">启用</option>
+                    <option value="0">停用</option>
+                  </select>
+                </div>
+                <button type="button" id="button-filter" class="btn btn-primary pull-right">
+                  <i class="fa fa-search"></i>
+                  筛选
+                </button>
+              </div>
+            </div>
+          </div> -->
+          <form action="<?php echo U('multi');?>" method="post" enctype="multipart/form-data" id="form-member">
+            <input type="hidden" id="input-operate_type" name="operate_type" value="">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <td style="width: 1px;" class="text-center">
+                      <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" />
+                    </td>
+                    <td class="text-center"></td>
+                    <td class="text-left">
+                      <a href="" class="asc">会员</a>
+                    </td>
+                    <td class="text-left">
+                      <a href="">Email</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="" class="desc">电话</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="">订阅否</a>
+                    </td>
+                    
+                    <td class="text-right">管理</td>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i;?><tr>
+                    <td class="text-center">
+                      <input type="checkbox" name="selected[]" value="<?php echo ($row['member_id']); ?>" />
+                    </td>
+                    <td class="text-center">
+                      <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/avatar.png" alt="HEAD" class="img-thumbnail" style="max-width: 40px"/>
+                    </td>
+                    <td class="text-left"><?php echo ($row['name']); ?></td>
+                    <td class="text-left"><?php echo ($row['email']); ?></td>
+                    <td class="text-right"><?php echo ($row['telephone']); ?></td>
+                    <td class="text-right">
+                    <?php if($row['is_newsletter'] == '1'): ?>是
+                    <?php else: ?>
+                    否<?php endif; ?>
+                    </td>
+                    <td class="text-right">
+                      <a href="<?php echo U('Back/Member/edit', ['member_id'=>$row['member_id']]);?>" data-toggle="tooltip" title="编辑" class="btn btn-primary">
+                        <i class="fa fa-pencil"></i>
+                      </a>
+                  </td>
+                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+              </tbody>
+            </table>
+          </div>
+        </form>
+        <div class="row">
+          <?php echo ($page_html); ?>
+        </div>
+        <!-- <div class="row">
+          <div class="col-sm-6 text-left">
+            <ul class="pagination">
+              <li class="active">
+                <span>1</span>
+              </li>
+              <li>
+                <a href="">2</a>
+              </li>
+              <li>
+                <a href="">&gt;</a>
+              </li>
+              <li>
+                <a href="">&gt;|</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
+        </div>-->
+      </div>
+    </div>
+  </div>
+  </div>
+
 
 
 <footer id="footer">
@@ -540,15 +693,11 @@
 </div>
 
 
-  <script type="text/javascript" src="__PUBLIC__/Back/jquery/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="__PUBLIC__/Back/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="__PUBLIC__/Back/summernote/summernote.js"></script>
-  <script src="__PUBLIC__/Back/datetimepicker/moment.js" type="text/javascript"></script>
-  <script src="__PUBLIC__/Back/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-  <script src="__PUBLIC__/Back/javascript/common.js" type="text/javascript"></script>
-
-  <block name="bottomJS">
-
-  </block>
+  <script type="text/javascript" src="/GitRepository/GitHub/BuyPlus/Public/Back/jquery/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="/GitRepository/GitHub/BuyPlus/Public/Back/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/GitRepository/GitHub/BuyPlus/Public/Back/summernote/summernote.js"></script>
+  <script src="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/moment.js" type="text/javascript"></script>
+  <script src="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+  <script src="/GitRepository/GitHub/BuyPlus/Public/Back/javascript/common.js" type="text/javascript"></script>
 </body>
 </html>

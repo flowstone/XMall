@@ -8,12 +8,19 @@
           <a href="{:U('add')}" data-toggle="tooltip" title="新增" class="btn btn-primary">
             <i class="fa fa-plus"></i>
           </a>
+<<<<<<< HEAD
 
           <button type="button" data-toggle="tooltip" title="发送邮件" class="btn btn-default" onclick="return submitMail()">
              <i class="fa glyphicon glyphicon-envelope"></i>
 
           </button>
           <script>
+=======
+          <button type="button" data-toggle="tooltip" title="发送邮件" class="btn btn-primary" onclick="return submitMail();">
+            <i class=" fa-envelope"></i>
+          </button>
+          <script type="text/javascript">
+>>>>>>> dev
             function submitMail() {
               if (window.confirm('确认？')) {
                 $('#input-operate_type').val('mail');
@@ -24,8 +31,12 @@
               }
             }
           </script>
+<<<<<<< HEAD
 
           <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-member').submit() : false;">
+=======
+          <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-product').submit() : false;">
+>>>>>>> dev
             <i class="fa fa-trash-o"></i>
           </button>
 
@@ -132,6 +143,7 @@
                     </td>
                   </tr>
                 </volist>
+<<<<<<< HEAD
                 </tbody>
               </table>
             </div>
@@ -159,6 +171,34 @@
             <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
           </div> -->
         </div>
+=======
+              </tbody>
+            </table>
+          </div>
+        </form>
+        <div class="row">
+          {$page_html}
+        </div>
+        <!-- <div class="row">
+          <div class="col-sm-6 text-left">
+            <ul class="pagination">
+              <li class="active">
+                <span>1</span>
+              </li>
+              <li>
+                <a href="">2</a>
+              </li>
+              <li>
+                <a href="">&gt;</a>
+              </li>
+              <li>
+                <a href="">&gt;|</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
+        </div>-->
+>>>>>>> dev
       </div>
     </div>
   </div>

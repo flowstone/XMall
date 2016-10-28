@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html dir="ltr" lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <title>控制面板</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <link href="__PUBLIC__/Back/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
-  <link href="__PUBLIC__/Back/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-  <link href="__PUBLIC__/Back/summernote/summernote.css" rel="stylesheet" />
-  <link href="__PUBLIC__/Back/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" />
-  <link type="text/css" href="__PUBLIC__/Back/stylesheet/stylesheet.css" rel="stylesheet" media="screen" />
+  <link href="/GitRepository/GitHub/BuyPlus/Public/Back/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
+  <link href="/GitRepository/GitHub/BuyPlus/Public/Back/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+  <link href="/GitRepository/GitHub/BuyPlus/Public/Back/summernote/summernote.css" rel="stylesheet" />
+  <link href="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/GitRepository/GitHub/BuyPlus/Public/Back/stylesheet/stylesheet.css" rel="stylesheet" media="screen" />
   
   
 </head>
@@ -20,7 +20,7 @@
         <a type="button" id="button-menu" class="pull-left"> <i class="fa fa-indent fa-lg"></i>
         </a>
         <a href="" class="navbar-brand">
-          <img src="__PUBLIC__/Back/image/logo.png" alt="OpenCart" title="OpenCart" />
+          <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/logo.png" alt="OpenCart" title="OpenCart" />
         </a>
       </div>
       <ul class="nav pull-right">
@@ -127,7 +127,7 @@
         <div>
           <!-- <i class="fa fa-opencart"></i>
         -->
-        <img src="__PUBLIC__/Back/image/avatar.png" style="max-width:42px; max-height: 42px;" ></div>
+        <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/avatar.png" style="max-width:42px; max-height: 42px;" ></div>
       <div>
         <h4>HelloKang</h4>
         <small>Administrator</small>
@@ -147,7 +147,7 @@
         </a>
         <ul>
           <li>
-            <a href="{:U('/Category/list')}">商品分类</a>
+            <a href="">商品分类</a>
           </li>
           <li>
             <a href="">商品管理</a>
@@ -527,8 +527,77 @@
   </nav>
 
   
-  <block name="content">
-  </block>
+  
+    <div id="content">
+        <div class="page-header">
+            <div class="container-fluid">
+                <div class="pull-right">
+                    <button type="submit" form="form-brand" data-toggle="tooltip" title="保存" class="btn btn-primary">
+                        <i class="fa fa-save"></i>
+                    </button>
+                    <a href="<?php echo U('list');?>" data-toggle="tooltip" title="取消" class="btn btn-default">
+                        <i class="fa fa-reply"></i>
+                    </a>
+                </div>
+                <h1>品牌</h1>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="<?php echo U('Manage/index');?>">首页</a>
+                    </li>
+                    <li>
+                        <a href="">品牌</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-pencil"></i>
+                        添加品牌
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <form action="<?php echo U('add');?>" method="post" enctype="multipart/form-data" id="form-brand" class="form-horizontal">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#tab-general" data-toggle="tab">基本信息</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab-general">
+                                <div class="form-group required">
+                                    <label class="col-sm-2 control-label" for="input-name2">品牌</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="title" value="" placeholder="品牌" id="input-title" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="input-sort_number">排序</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="sort_number" value="0" placeholder="排序" id="input-sort_number" class="form-control" />
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">图片</label>
+                                    <div class="col-sm-10">
+                                        <input id="input-logo_ori" type="file" name="logo_ori" class="">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 <footer id="footer">
@@ -540,15 +609,38 @@
 </div>
 
 
-  <script type="text/javascript" src="__PUBLIC__/Back/jquery/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="__PUBLIC__/Back/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="__PUBLIC__/Back/summernote/summernote.js"></script>
-  <script src="__PUBLIC__/Back/datetimepicker/moment.js" type="text/javascript"></script>
-  <script src="__PUBLIC__/Back/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-  <script src="__PUBLIC__/Back/javascript/common.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/GitRepository/GitHub/BuyPlus/Public/Back/jquery/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="/GitRepository/GitHub/BuyPlus/Public/Back/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/GitRepository/GitHub/BuyPlus/Public/Back/summernote/summernote.js"></script>
+  <script src="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/moment.js" type="text/javascript"></script>
+  <script src="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+  <script src="/GitRepository/GitHub/BuyPlus/Public/Back/javascript/common.js" type="text/javascript"></script>
 
-  <block name="bottomJS">
+  
+    <script src="/GitRepository/GitHub/BuyPlus/Public/Back/validation/jquery.validate.min.js"></script>
+    <script src="/GitRepository/GitHub/BuyPlus/Public/Back/validation/additional-methods.min.js"></script>
+    <script src="/GitRepository/GitHub/BuyPlus/Public/Back/validation/localization/messages_zh.min.js"></script>
 
-  </block>
+    <script>
+        $(function(){
+            $('#form-brand').validate({
+               //规则
+                rules:{
+                    title:{
+                        required: true,
+                        remote: "<?php echo U('ajax',['operate'=>'checkBrandUnique']);?>",
+                    },
+                },
+                //错误信息
+                messages:{
+                    title:{
+                        required: '品牌名称必须填写',
+                        remote: '品牌名称已经存在，请重新填写',
+                    }
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
