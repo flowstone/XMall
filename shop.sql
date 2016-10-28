@@ -1,6 +1,7 @@
 -- 创建数据库
 CREATE DATABASE buyplus CHARSET=UTF8;
 
+use buyplus;
 --创建会员表
 CREATE TABLE yao_member
 (
