@@ -1,1 +1,0 @@
-a:8:{i:0;s:9:"member_id";i:1;s:5:"email";i:2;s:9:"telephone";i:3;s:8:"password";i:4;s:4:"name";i:5;s:13:"is_newsletter";s:3:"_pk";s:9:"member_id";s:5:"_type";a:6:{s:9:"member_id";s:16:"int(10) unsigned";s:5:"email";s:12:"varchar(255)";s:9:"telephone";s:11:"varchar(16)";s:8:"password";s:11:"varchar(64)";s:4:"name";s:11:"varchar(64)";s:13:"is_newsletter";s:10:"tinyint(4)";}}

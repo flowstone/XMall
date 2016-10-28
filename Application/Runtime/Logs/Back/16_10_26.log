@@ -1,5 +1,0 @@
-[ 2016-10-26T01:05:32+08:00 ] ::1 /GitRepository/GitHub/BuyPlus/back.php/Category/list
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
-INFO: [ app_init ] --END-- [ RunTime:0.004630s ]
-

@@ -5,12 +5,30 @@
     <div class="page-header">
       <div class="container-fluid">
         <div class="pull-right">
-          <a href="{:U('Back/Member/add')}" data-toggle="tooltip" title="新增" class="btn btn-primary">
+          <a href="{:U('add')}" data-toggle="tooltip" title="新增" class="btn btn-primary">
             <i class="fa fa-plus"></i>
           </a>
-          <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-product').submit() : false;">
+
+          <button type="button" data-toggle="tooltip" title="发送邮件" class="btn btn-default" onclick="return submitMail()">
+             <i class="fa glyphicon glyphicon-envelope"></i>
+
+          </button>
+          <script>
+            function submitMail() {
+              if (window.confirm('确认？')) {
+                $('#input-operate_type').val('mail');
+                $('#form-member').submit();
+                return true;
+              } else {
+                return false;
+              }
+            }
+          </script>
+
+          <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-member').submit() : false;">
             <i class="fa fa-trash-o"></i>
           </button>
+
         </div>
         <h1>会员管理</h1>
         <ul class="breadcrumb">
@@ -62,30 +80,31 @@
               </div>
             </div>
           </div> -->
-          <form action="" method="post" enctype="multipart/form-data" id="form-product">
+          <form action="{:U('multi')}" method="post" enctype="multipart/form-data" id="form-member">
+            <input type="hidden" id="input-operate_type" name="operate_type" value="">
             <div class="table-responsive">
               <table class="table table-bordered table-hover">
                 <thead>
-                  <tr>
-                    <td style="width: 1px;" class="text-center">
-                      <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" />
-                    </td>
-                    <td class="text-center"></td>
-                    <td class="text-left">
-                      <a href="" class="asc">会员</a>
-                    </td>
-                    <td class="text-left">
-                      <a href="">Email</a>
-                    </td>
-                    <td class="text-right">
-                      <a href="" class="desc">电话</a>
-                    </td>
-                    <td class="text-right">
-                      <a href="">订阅否</a>
-                    </td>
-                    
-                    <td class="text-right">管理</td>
-                  </tr>
+                <tr>
+                  <td style="width: 1px;" class="text-center">
+                    <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" />
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-left">
+                    <a href="" class="asc">会员</a>
+                  </td>
+                  <td class="text-left">
+                    <a href="">Email</a>
+                  </td>
+                  <td class="text-right">
+                    <a href="" class="desc">电话</a>
+                  </td>
+                  <td class="text-right">
+                    <a href="">订阅否</a>
+                  </td>
+
+                  <td class="text-right">管理</td>
+                </tr>
                 </thead>
                 <tbody>
                 <volist name="rows" id="row">
@@ -100,47 +119,47 @@
                     <td class="text-left">{$row['email']}</td>
                     <td class="text-right">{$row['telephone']}</td>
                     <td class="text-right">
-                    <if condition="$row['is_newsletter'] eq '1'" >
-                    是
-                    <else />
-                    否
-                    </if>
+                      <if condition="$row['is_newsletter'] eq '1'" >
+                        是
+                        <else />
+                        否
+                      </if>
                     </td>
                     <td class="text-right">
                       <a href="{:U('Back/Member/edit', ['member_id'=>$row['member_id']])}" data-toggle="tooltip" title="编辑" class="btn btn-primary">
                         <i class="fa fa-pencil"></i>
                       </a>
-                  </td>
-                </tr>
+                    </td>
+                  </tr>
                 </volist>
-              </tbody>
-            </table>
+                </tbody>
+              </table>
+            </div>
+          </form>
+          <div class="row">
+            {$page_html}
           </div>
-        </form>
-        <div class="row">
-          {$page_html}
-        </div>
-         <div class="row">
-          <div class="col-sm-6 text-left">
-            <ul class="pagination">
-              <li class="active">
-                <span>1</span>
-              </li>
-              <li>
-                <a href="">2</a>
-              </li>
-              <li>
-                <a href="">&gt;</a>
-              </li>
-              <li>
-                <a href="">&gt;|</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
+          <!-- <div class="row">
+            <div class="col-sm-6 text-left">
+              <ul class="pagination">
+                <li class="active">
+                  <span>1</span>
+                </li>
+                <li>
+                  <a href="">2</a>
+                </li>
+                <li>
+                  <a href="">&gt;</a>
+                </li>
+                <li>
+                  <a href="">&gt;|</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
+          </div> -->
         </div>
       </div>
     </div>
-  </div>
   </div>
 </block>
