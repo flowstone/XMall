@@ -147,7 +147,7 @@
         </a>
         <ul>
           <li>
-            <a href="">商品分类</a>
+            <a href="<?php echo U('/Category/list');?>">商品分类</a>
           </li>
           <li>
             <a href="">商品管理</a>
