@@ -1,1 +1,3 @@
 .idea/
+Application/Back/Conf/db.php
+Application/Home/Conf/db.php
