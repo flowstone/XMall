@@ -55,5 +55,3 @@ INSERT INTO yao_member_login_log VALUES (NULL, 11, unix_timestamp()-50000, inet_
 INSERT INTO yao_member_login_log VALUES (NULL, 11, unix_timestamp()-10000, inet_aton('22.45.165.11'), 0);
 INSERT INTO yao_member_login_log VALUES (NULL, 11, unix_timestamp(), inet_aton('22.45.163.12'), 0);
 
--- 注册行为日志
-CREATE TABLE member_register_log();
