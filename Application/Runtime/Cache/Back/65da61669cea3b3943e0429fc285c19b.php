@@ -129,8 +129,8 @@
         -->
         <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/avatar.png" style="max-width:42px; max-height: 42px;" ></div>
       <div>
-        <h4>HelloKang</h4>
-        <small>Administrator</small>
+        <h4>流体石头</h4>
+        <small>管理员</small>
       </div>
     </div>
     <ul id="menu">
@@ -619,22 +619,21 @@
                     <td class="text-center">
                       <input type="checkbox" name="selected[]" value="<?php echo ($row['category_id']); ?>" />
                     </td>
-                    <td class="text-left">
-                      <?php echo str_repeat('&nbsp;',$row['deep']*8); echo ($row['title']); ?>
-                    </td>
+                    <td class="text-left"><?php echo str_repeat('&nbsp;', $row['deep']*8); echo ($row['title']); ?></td>
                     <td class="text-center">
                       <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/avatar.png" alt="HEAD" class="img-thumbnail" style="max-width: 40px"/>
                     </td>
                     <td class="text-right"><?php echo ($row['sort_number']); ?></td>
+                   
                     <td class="text-right">
                     <?php if($row['is_used'] == '1'): ?>是
                     <?php else: ?>
                     否<?php endif; ?>
                     </td>
                     <td class="text-right">
-                      <?php if($row['is_nav'] == '1'): ?>是
-                        <?php else: ?>
-                        否<?php endif; ?>
+                    <?php if($row['is_nav'] == '1'): ?>是
+                    <?php else: ?>
+                    否<?php endif; ?>
                     </td>
                     <td class="text-right">
                       <a href="<?php echo U('edit', ['category_id'=>$row['category_id']]);?>" data-toggle="tooltip" title="编辑" class="btn btn-primary">
@@ -667,7 +666,7 @@
             </ul>
           </div>
           <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
-        </div>-->
+        </div> -->
       </div>
     </div>
   </div>
@@ -676,7 +675,7 @@
 
 
 <footer id="footer">
-  <a href="">BuyPlus(败家Shopping) HelloKang</a>
+  <a href="">XMall在线商场</a>
   <br>
   &copy; 2009-2016 All Rights Reserved.
   <br>Version 1.0</footer>
@@ -690,5 +689,9 @@
   <script src="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/moment.js" type="text/javascript"></script>
   <script src="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
   <script src="/GitRepository/GitHub/BuyPlus/Public/Back/javascript/common.js" type="text/javascript"></script>
+
+  
+
+  
 </body>
 </html>

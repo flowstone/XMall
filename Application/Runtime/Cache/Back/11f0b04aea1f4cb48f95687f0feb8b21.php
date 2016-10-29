@@ -129,8 +129,8 @@
         -->
         <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/avatar.png" style="max-width:42px; max-height: 42px;" ></div>
       <div>
-        <h4>HelloKang</h4>
-        <small>Administrator</small>
+        <h4>流体石头</h4>
+        <small>管理员</small>
       </div>
     </div>
     <ul id="menu">
@@ -535,10 +535,19 @@
           <a href="<?php echo U('add');?>" data-toggle="tooltip" title="新增" class="btn btn-primary">
             <i class="fa fa-plus"></i>
           </a>
+<<<<<<< HEAD
+
+          <button type="button" data-toggle="tooltip" title="发送邮件" class="btn btn-default" onclick="return submitMail()">
+             <i class="fa glyphicon glyphicon-envelope"></i>
+
+          </button>
+          <script>
+=======
           <button type="button" data-toggle="tooltip" title="发送邮件" class="btn btn-primary" onclick="return submitMail();">
-            <i class="glyphicon glyphicon-envelope"></i>
+            <i class=" fa-envelope"></i>
           </button>
           <script type="text/javascript">
+>>>>>>> dev
             function submitMail() {
               if (window.confirm('确认？')) {
                 $('#input-operate_type').val('mail');
@@ -549,9 +558,15 @@
               }
             }
           </script>
+<<<<<<< HEAD
+
+          <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-member').submit() : false;">
+=======
           <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="confirm('确认？') ? $('#form-product').submit() : false;">
+>>>>>>> dev
             <i class="fa fa-trash-o"></i>
           </button>
+
         </div>
         <h1>会员管理</h1>
         <ul class="breadcrumb">
@@ -608,26 +623,26 @@
             <div class="table-responsive">
               <table class="table table-bordered table-hover">
                 <thead>
-                  <tr>
-                    <td style="width: 1px;" class="text-center">
-                      <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" />
-                    </td>
-                    <td class="text-center"></td>
-                    <td class="text-left">
-                      <a href="" class="asc">会员</a>
-                    </td>
-                    <td class="text-left">
-                      <a href="">Email</a>
-                    </td>
-                    <td class="text-right">
-                      <a href="" class="desc">电话</a>
-                    </td>
-                    <td class="text-right">
-                      <a href="">订阅否</a>
-                    </td>
-                    
-                    <td class="text-right">管理</td>
-                  </tr>
+                <tr>
+                  <td style="width: 1px;" class="text-center">
+                    <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" />
+                  </td>
+                  <td class="text-center"></td>
+                  <td class="text-left">
+                    <a href="" class="asc">会员</a>
+                  </td>
+                  <td class="text-left">
+                    <a href="">Email</a>
+                  </td>
+                  <td class="text-right">
+                    <a href="" class="desc">电话</a>
+                  </td>
+                  <td class="text-right">
+                    <a href="">订阅否</a>
+                  </td>
+
+                  <td class="text-right">管理</td>
+                </tr>
                 </thead>
                 <tbody>
                 <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i;?><tr>
@@ -641,16 +656,45 @@
                     <td class="text-left"><?php echo ($row['email']); ?></td>
                     <td class="text-right"><?php echo ($row['telephone']); ?></td>
                     <td class="text-right">
-                    <?php if($row['is_newsletter'] == '1'): ?>是
-                    <?php else: ?>
-                    否<?php endif; ?>
+                      <?php if($row['is_newsletter'] == '1'): ?>是
+                        <?php else: ?>
+                        否<?php endif; ?>
                     </td>
                     <td class="text-right">
                       <a href="<?php echo U('Back/Member/edit', ['member_id'=>$row['member_id']]);?>" data-toggle="tooltip" title="编辑" class="btn btn-primary">
                         <i class="fa fa-pencil"></i>
                       </a>
-                  </td>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </td>
+                  </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+<<<<<<< HEAD
+                </tbody>
+              </table>
+            </div>
+          </form>
+          <div class="row">
+            <?php echo ($page_html); ?>
+          </div>
+          <!-- <div class="row">
+            <div class="col-sm-6 text-left">
+              <ul class="pagination">
+                <li class="active">
+                  <span>1</span>
+                </li>
+                <li>
+                  <a href="">2</a>
+                </li>
+                <li>
+                  <a href="">&gt;</a>
+                </li>
+                <li>
+                  <a href="">&gt;|</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
+          </div> -->
+        </div>
+=======
               </tbody>
             </table>
           </div>
@@ -677,15 +721,15 @@
           </div>
           <div class="col-sm-6 text-right">显示开始 1 到 20 之 23 （总 2 页）</div>
         </div>-->
+>>>>>>> dev
       </div>
     </div>
-  </div>
   </div>
 
 
 
 <footer id="footer">
-  <a href="">BuyPlus(败家Shopping) HelloKang</a>
+  <a href="">XMall在线商场</a>
   <br>
   &copy; 2009-2016 All Rights Reserved.
   <br>Version 1.0</footer>
@@ -699,5 +743,9 @@
   <script src="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/moment.js" type="text/javascript"></script>
   <script src="/GitRepository/GitHub/BuyPlus/Public/Back/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
   <script src="/GitRepository/GitHub/BuyPlus/Public/Back/javascript/common.js" type="text/javascript"></script>
+
+  
+
+  
 </body>
 </html>

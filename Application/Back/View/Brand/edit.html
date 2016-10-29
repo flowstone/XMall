@@ -1,4 +1,5 @@
-<extend name="Layout/Back"/>
+<Extend name="Layout/Back" />
+
 <block name="content">
     <div id="content">
         <div class="page-header">
@@ -27,29 +28,32 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <i class="fa fa-pencil"></i>
-                        添加品牌
+                        编辑品牌
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <form action="{:U('add')}" method="post" enctype="multipart/form-data" id="form-brand" class="form-horizontal">
+                    <form action="{:U('edit')}" method="post" enctype="multipart/form-data" id="form-brand" class="form-horizontal">
+
+                        <input type="hidden" name="brand_id" id="input-brand_id" value="{$row['brand_id']}" >
                         <ul class="nav nav-tabs">
                             <li class="active">
                                 <a href="#tab-general" data-toggle="tab">基本信息</a>
                             </li>
-
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="tab-general">
                                 <div class="form-group required">
                                     <label class="col-sm-2 control-label" for="input-name2">品牌</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="title" value="" placeholder="品牌" id="input-title" class="form-control" />
+                                        <input type="text" name="title" value="{$row['title']}" placeholder="品牌" id="input-title" class="form-control" />
                                     </div>
                                 </div>
+
+
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="input-sort_number">排序</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="sort_number" value="0" placeholder="排序" id="input-sort_number" class="form-control" />
+                                        <input type="text" name="sort_number" value="{$row['sort_number']}" placeholder="排序" id="input-sort_number" class="form-control" />
                                     </div>
                                 </div>
 
@@ -71,36 +75,42 @@
     </div>
 </block>
 
-
 <block name="bottomJS">
-    <script src="__PUBLIC__/Back/validation/jquery.validate.min.js"></script>
-    <script src="__PUBLIC__/Back/validation/additional-methods.min.js"></script>
-    <script src="__PUBLIC__/Back/validation/localization/messages_zh.min.js"></script>
+    <script src="__PUBLIC__/Back/validate/jquery.validate.min.js"></script>
+    <script src="__PUBLIC__/Back/validate/additional-methods.min.js"></script>
+    <script src="__PUBLIC__/Back/validate/localization/messages_zh.min.js"></script>
 
     <script>
-        $(function(){
+        $(function() {
             $('#form-brand').validate({
-               //规则
-                rules:{
-                    title:{
+                // 规则
+                rules: {
+                    title: {
                         required: true,
-                        remote: "{:U('ajax',['operate'=>'checkBrandUnique'])}",
+                        remote: {
+                            url: '{:U('ajax', ['operate'=>'checkBrandUnique'])}',
+                            data: {
+                                // 获取当前的品牌ID
+                                'brand_id': $('#input-brand_id').val(),
+                            }
+                        }
                     },
-                    sort_number:{
+                    sort_number: {
                         digits: true,
                     }
                 },
-                //错误信息
-                messages:{
-                    title:{
+                // 错误信息
+                messages: {
+                    title: {
                         required: '品牌名称必须填写',
-                        remote: '品牌名称已经存在，请重新填写',
+                        remote: '品牌名称已经存在, 请重新填写',
                     },
-                    sort_number:{
+                    sort_number: {
                         digits: '排序字段要求为整数',
-                    }
+                    },
                 }
             });
         });
+
     </script>
 </block>

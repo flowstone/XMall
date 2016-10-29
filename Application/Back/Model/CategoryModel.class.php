@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 namespace Back\Model;
 
 use Think\Model;
@@ -25,7 +24,7 @@ class CategoryModel extends Model
             // 存储缓存中
             // S($key, $tree);
         // }
-        echo G('c_begin', 'c_end'), 's', '<br>';
+        //echo G('c_begin', 'c_end'), 's', '<br>';
         // 返回数据
         return $tree;
 
@@ -33,41 +32,6 @@ class CategoryModel extends Model
     // 递归 树
     public function tree($rows, $category_id=0, $deep=0) 
     {
-=======
-/**
- * Created by PhpStorm.
- * User: 尧
- * Date: 10/21/2016
- * Time: 10:47 PM
- */
-namespace  Back\Model;
-use Think\Model;
-class CategoryModel extends  Model{
-
-    public function getTreeList(){
-        //获取所有的分类
-        //配置缓存
-        S(['type'=>'Memcache', 'host'=>'127.0.0.1', 'port'=>'11211']);
-        G('c_begin');
-        $key = 'back_category_tree';
-        //判断缓存是否存在
-        if (!($tree = S($key))) {
-
-            //从数据源获取
-            $rows = $this->order('sort_number')->select();
-            $tree =  $this->tree($rows);
-            //存储缓存中
-            S($key, $tree);
-        }
-        echo G('c_begin', 'c_end'), 's', '<br>';
-        //返回数据
-        return $tree;
-
-    }
-
-    //递归 树
-    public function tree($rows, $category_id=0, $deep=0) {
->>>>>>> dev
         static $tree = [];
         foreach($rows as $row) {
             if ($row['parent_id'] == $category_id) {

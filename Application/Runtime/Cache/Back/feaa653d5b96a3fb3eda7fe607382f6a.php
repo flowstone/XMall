@@ -129,8 +129,8 @@
         -->
         <img src="/GitRepository/GitHub/BuyPlus/Public/Back/image/avatar.png" style="max-width:42px; max-height: 42px;" ></div>
       <div>
-        <h4>HelloKang</h4>
-        <small>Administrator</small>
+        <h4>流体石头</h4>
+        <small>管理员</small>
       </div>
     </div>
     <ul id="menu">
@@ -147,7 +147,7 @@
         </a>
         <ul>
           <li>
-            <a href="">商品分类</a>
+            <a href="<?php echo U('/Category/list');?>">商品分类</a>
           </li>
           <li>
             <a href="">商品管理</a>
@@ -601,7 +601,7 @@
 
 
 <footer id="footer">
-  <a href="">BuyPlus(败家Shopping) HelloKang</a>
+  <a href="">XMall在线商场</a>
   <br>
   &copy; 2009-2016 All Rights Reserved.
   <br>Version 1.0</footer>
@@ -630,12 +630,18 @@
                         required: true,
                         remote: "<?php echo U('ajax',['operate'=>'checkBrandUnique']);?>",
                     },
+                    sort_number:{
+                        digits: true,
+                    }
                 },
                 //错误信息
                 messages:{
                     title:{
                         required: '品牌名称必须填写',
                         remote: '品牌名称已经存在，请重新填写',
+                    },
+                    sort_number:{
+                        digits: '排序字段要求为整数',
                     }
                 }
             });
