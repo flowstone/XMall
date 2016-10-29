@@ -1,12 +1,10 @@
 -- 创建数据库
-CREATE DATABASE buyplus CHARSET=UTF8;
+CREATE DATABASE xmall CHARSET=UTF8;
 
-<<<<<<< HEAD
-use buyplus;
+use xmall;
 --创建会员表
-=======
--- 创建会员表
->>>>>>> dev
+
+
 CREATE TABLE yao_member
 (
     member_id INT UNSIGNED AUTO_INCREMENT,
@@ -59,7 +57,7 @@ INSERT INTO yao_member_login_log VALUES (NULL, 11, unix_timestamp()-50000, inet_
 INSERT INTO yao_member_login_log VALUES (NULL, 11, unix_timestamp()-10000, inet_aton('22.45.165.11'), 0);
 INSERT INTO yao_member_login_log VALUES (NULL, 11, unix_timestamp(), inet_aton('22.45.163.12'), 0);
 
-<<<<<<< HEAD
+
 
 CREATE TABLE yao_session
 (
@@ -94,7 +92,7 @@ create table yao_category (
 	index (parent_id),
 	index (sort_number)
 ) charset=utf8;
-=======
+
 -- 注册行为日志
 CREATE TABLE member_register_log();
 
@@ -121,7 +119,7 @@ CREATE TABLE yao_category(
     index (parent_id),
     index (sort_number)
 )CHARSET=UTF8;
->>>>>>> dev
+
 
 insert into yao_category values (1, '未分类', 0, -1, '', '', 0, 0, '', '', '');
 insert into yao_category values (5, '眼镜', 0, 0, '', '', 1, 1, '', '', '');
@@ -156,7 +154,7 @@ insert into yao_category values (34, '小说', 16, 0, '', '', 1, 0, '', '', '');
 insert into yao_category values (35, '成功学', 16, 0, '', '', 1, 0, '', '', '');
 insert into yao_category values (36, '经济金融', 16, 0, '', '', 1, 0, '', '', '');
 insert into yao_category values (37, '免费', 16, 0, '', '', 1, 0, '', '', '');
-<<<<<<< HEAD
+
 
 
 create table yao_brand(
@@ -172,5 +170,4 @@ create table yao_brand(
     index (sort_number),
     index (title)
 )charset=utf8;
-=======
->>>>>>> dev
+
