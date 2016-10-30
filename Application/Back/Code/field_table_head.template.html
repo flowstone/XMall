@@ -1,0 +1,11 @@
+                                        
+                                        <td class="text-left">
+                                        <if condition="$order['field'] eq '__FIELD_NAME__' AND $order['type'] eq 'asc'">
+                                            <a href="{:U('list', $filter+['field'=>'__FIELD_NAME__', 'type'=>'desc'])}" class="asc">__FIELD_NAME__</a>
+                                        <elseif condition="$order['field'] eq '__FIELD_NAME__' AND $order['type'] eq 'desc'" />
+                                            <a href="{:U('list', $filter+['field'=>'__FIELD_NAME__', 'type'=>'asc'])}" class="desc">__FIELD_NAME__</a>
+                                        <else />
+                                            <a href="{:U('list', $filter+['field'=>'__FIELD_NAME__', 'type'=>'asc'])}" class="">__FIELD_NAME__</a>
+                                        </if>
+                                        </td>
+                                        

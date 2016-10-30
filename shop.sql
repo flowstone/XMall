@@ -70,7 +70,7 @@ CREATE TABLE yao_session
 
 
 -- 商品分类表
-drop table if exists kang_category;
+drop table if exists yao_category;
 create table yao_category (
 	category_id int unsigned auto_increment,
 	title varchar(32) not null default '',
@@ -170,4 +170,60 @@ create table yao_brand(
     index (sort_number),
     index (title)
 )charset=utf8;
+
+-- 配置项类型（不提供管理接口）
+create table yao_setting_type (
+	setting_type_id int unsigned auto_increment,
+	type_title varchar(32) not null default '', -- 类型说明
+	primary key (setting_type_id)
+) charset=utf8;
+-- 加入测试数据
+insert into yao_setting_type values (1, 'text');-- 文本
+insert into yao_setting_type values (2, 'textarea');-- 大文本
+insert into yao_setting_type values (3, 'select');-- 单选
+insert into yao_setting_type values (4, 'select-multi');-- 多选
+
+-- 配置项分组（不提供管理接口）
+create table yao_setting_group (
+	setting_group_id int unsigned auto_increment,
+	group_title varchar(32) not null default '',-- 分组的标题
+	primary key (setting_group_id)
+) charset=utf8;
+-- 加入测试数据
+insert into yao_setting_group values (1, '商店设置');-- ['goods_count']
+insert into yao_setting_group values (2, '安全配置');-- [goods_count']
+
+-- 配置项
+create table yao_setting (
+	setting_id int unsigned not null auto_increment,
+	`key` varchar(32) not null default '', -- 程序使用的key
+	value varchar(255) not null default '', -- 配置项的值
+	title varchar(32) not null default '', -- 配置项的标题描述
+	setting_type_id int unsigned not null default 0, -- 配置项输入类型ID
+	setting_group_id int unsigned not null default 0, -- 配置项分组的ID
+	sort_number int not null default 0, -- 排序标识
+	primary key (setting_id),
+	index (setting_type_id),
+	index (setting_group_id),
+	index (sort_number)
+) charset=utf8;
+-- 测试数据
+insert into yao_setting values (1, 'shop_title', 'BuyPlus(败家Shopping)', '商店名称', 1, 1,  0);
+insert into yao_setting values (2, 'allow_comment', '5', '是否允许商品评论', 3, 1, 0);
+insert into yao_setting values (3, 'use_captcha', '1,3', '哪些页面使用验证码', 4, 2, 0);
+insert into yao_setting values (4, 'mate_description', 'BuyPlus(败家Shopping), 用BuyPlus，不败家！', 'mate描述description', 2, 1, 0);
+-- 配置系统选项预设值
+create table yao_setting_option (
+	setting_option_id int unsigned auto_increment,-- 选项预设值的option value="option_id"
+	option_title varchar(32) not null default '', -- 选项预设值显示内容<option>option_title</option>
+	setting_id int unsigned not null default 0,-- 对应的选项ID, 如果选项为单向或多选类型, 则存在对于的选项预设值列表
+	primary key (setting_option_id),
+	index (setting_id)
+) charset=utf8;
+insert into yao_setting_option values (1, '注册', 3);
+insert into yao_setting_option values (2, '登录', 3);
+insert into yao_setting_option values (3, '评论', 3);
+insert into yao_setting_option values (4, '生成订单', 3);
+insert into yao_setting_option values (5, '是', 2);
+insert into yao_setting_option values (6, '否', 2);
 

@@ -1,0 +1,67 @@
+<Extend name="Layout/Back" />
+
+<block name="content">
+<div id="content">
+    <div class="page-header">
+      <div class="container-fluid">
+        <div class="pull-right">
+          <button type="submit" form="form-__MODEL__" data-toggle="tooltip" title="保存" class="btn btn-primary">
+            <i class="fa fa-save"></i>
+          </button>
+          <a href="{:U('list')}" data-toggle="tooltip" title="取消" class="btn btn-default">
+            <i class="fa fa-reply"></i>
+          </a>
+        </div>
+        <h1>__TABLE_TITLE__</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a href="{:U('Manage/index')}">首页</a>
+          </li>
+          <li>
+            <a href="">__TABLE_TITLE__</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <i class="fa fa-pencil"></i>
+            添加__TABLE_TITLE__
+          </h3>
+        </div>
+        <div class="panel-body">
+          <form action="{:U('add')}" method="post" enctype="multipart/form-data" id="form-__MODEL__" class="form-horizontal">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a href="#tab-general" data-toggle="tab">基本信息</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab-general">
+
+                __FORM_FIELD_LIST__
+   
+              </div>
+             
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>
+
+<block name="bottomJS">
+    <script src="__PUBLIC__/Back/validate/jquery.validate.min.js"></script>
+    <script src="__PUBLIC__/Back/validate/additional-methods.min.js"></script>
+    <script src="__PUBLIC__/Back/validate/localization/messages_zh.min.js"></script>
+
+    <script>
+    $(function() {
+        $('#form-__MODEL__').validate({});           
+    });
+
+    </script>
+</block>

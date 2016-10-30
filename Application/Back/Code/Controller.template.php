@@ -5,17 +5,17 @@
  * Date: 10/28/2016
  * Time: 1:53 PM
  */
-namespace Back\Controller;
+namespace __MODULE__\Controller;
 use Think\Controller;
 use Think\Page;
 
-class BrandController extends Controller{
+class __CONTROLLER__Controller extends Controller{
 
     public function addAction(){
         //判断是否为POST数据提交
         if (IS_POST) {
           //数据处理
-            $model = D('Brand');
+            $model = D('__MODEL__');
             $result = $model->create();
 
             if (!$result) {
@@ -42,26 +42,29 @@ class BrandController extends Controller{
     public function listAction(){
         //分页、搜索、排序
 
-        $model = M('Brand');
-        $cond = []; //初始条件
-        $filter['filter_title'] = I('get.filter_title','','trim');
-        if ($filter['filter_title'] !== '') {
-            $cond['title'] = ['like', '%'.$filter['filter_title'].'%']; //适当考虑索引问题
-        }
+        $model = M('__MODEL__');
+        $cond = $filter = []; //初始条件
+        /*
+           在生成代码的基础上，自定义完成搜索条件
+        */
         //分配筛选数据，到模板，为了展示搜索条件
         $this->assign('filter', $filter);
 
         //排序
+        $sort = $order = [];
         //考虑用户所传递的排序方式和字段
-        $order['field'] = I('get.field', 'sort_number', 'trim');//初始排序，字段
-        $order['type'] = I('get.type', 'asc', 'trim');//初始排序，方式
-        $sort = [$order['field']=>$order['type']];
-        //$sort = $order['field'].''.$order['type'];
+        //在生成代码的基础上，自定义默认的排序字段
+//        $order['field'] = I('get.field', '默认字段', 'trim');//初始排序，字段
+//        $order['type'] = I('get.type', '默认排序', 'trim');//初始排序，方式
+        if (!empty($order)) {
+	      $sort = $order['field'] . ' ' . $order['type'];
+        }
+        
         $this->assign('order', $order);
 
         //分页
         $page = I('get.p','1'); //当前页码
-        $pagesize = 1; //每页记录数
+        $pagesize = 10; //每页记录数
 
         //获取总记录数
         $count = $model->where($cond)->count(); //合计
@@ -78,8 +81,8 @@ class BrandController extends Controller{
         $page_html = $t_page->show();
         $this->assign('page_html',$page_html);
 
-        $row = $model->where($cond)->order($sort)->page("$page,$pagesize")->select();
-        $this->assign('rows', $row);
+        $rows = $model->where($cond)->order($sort)->page("$page,$pagesize")->select();
+        $this->assign('rows', $rows);
 
         $this->display();
     }
@@ -89,22 +92,22 @@ class BrandController extends Controller{
      */
     public function editAction(){
         if (IS_POST) {
-            $model = D('Brand');
+            $model = D('__MODEL__');
             $result = $model->create();
 
             if (!$result) {
-                $this->error('数据修改失败：',U('edit'));
+                $this->error('数据修改失败：'.$model->getError(),U('edit'));
             }
             $result = $model->save();
             if (!$result) {
-                $this->error('数据修改失败：',U('edit'));
+                $this->error('数据修改失败：'.$model->getError(),U('edit'));
             }
             //成功重定向到list页
             $this->redirect('list',[],0);
         } else {
             //获取当前编辑的内容
-            $brand_id = I('get.brand_id','','trim');
-            $this->assign('row',M('Brand')->find($brand_id));
+            $__PK_FIELD__ = I('get.__PK_FIELD__','','trim');
+            $this->assign('row',M('__MODEL__')->find($__PK_FIELD__));
 
             //展示模板
             $this->display();
@@ -120,11 +123,15 @@ class BrandController extends Controller{
         //确定ID列表
         $selected = I('post.selected', []);
 
+        if (empty($selected)) {
+            $this->redirect('list', [], 0);
+            return ;
+        }
         switch ($operate) {
             case 'delete' :
                 //使用in条件，删除全部的品牌
-                $cond = ['brand_id'=>['in',$selected]];
-                M('Brand')->where($cond)->delete();
+                $cond = ['__PK_FIELD__'=>['in',$selected]];
+                M('__MODEL__')->where($cond)->delete();
                 $this->redirect('list', [], 0);
                 break;
             default:
@@ -155,7 +162,7 @@ class BrandController extends Controller{
                     $cond['brand_id'] = ['neq', $brand_id];
                 }
                 //获取模型后,利用条件获取匹配的记录数
-                $count = M('Brand')->where($cond)->count();
+                $count = M('__MODEL__')->where($cond)->count();
                 //如果记录数>0,条件为真，说明存在记录，重复，验证未通过，响应false
                 echo $count ? 'false' : 'true';
              break;
