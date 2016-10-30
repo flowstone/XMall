@@ -40,49 +40,35 @@ class SettingController extends Controller{
      * 列表相关动作
      */
     public function listAction(){
-        //分页、搜索、排序
+        //获取分组
+        $m_group = M('SettingGroup');
+        $group_rows = $m_group->select();
+        $this->assign('group_rows',$group_rows);
 
-        $model = M('Setting');
-        $cond = $filter = []; //初始条件
-        /*
-           在生成代码的基础上，自定义完成搜索条件
-        */
-        //分配筛选数据，到模板，为了展示搜索条件
-        $this->assign('filter', $filter);
+        //获取配置项
+        $m_setting = D('Setting');
+        $setting_rows = $m_setting
+                    ->alias('s')
+                    ->join('left join __SETTING_TYPE__ st Using(setting_type_id)')
+                    ->relation(true)
+                    ->select();
 
-        //排序
-        $sort = $order = [];
-        //考虑用户所传递的排序方式和字段
-        //在生成代码的基础上，自定义默认的排序字段
-//        $order['field'] = I('get.field', '默认字段', 'trim');//初始排序，字段
-//        $order['type'] = I('get.type', '默认排序', 'trim');//初始排序，方式
-        if (!empty($order)) {
-	      $sort = $order['field'] . ' ' . $order['type'];
+        //遍历所有的配置项，分组管理
+        $group_setting = [];
+        foreach ($setting_rows as $setting) {
+            //判断是否为多选类型，如果是，拆分value为数组
+            if ($setting['type_title'] == 'select_multi') {
+                $setting['value_list'] = explode(',', $setting['value']);
+            }
+            //当前分组ID
+            $group_id = $setting['setting_group_id'];
+            //将配置项，存储在以组ID为下标的数组
+            $group_setting[$group_id][] = $setting;
+
         }
-        
-        $this->assign('order', $order);
-
-        //分页
-        $page = I('get.p','1'); //当前页码
-        $pagesize = 10; //每页记录数
-
-        //获取总记录数
-        $count = $model->where($cond)->count(); //合计
-        $t_page = new Page($count, $pagesize); //use Think\Page;
-
-        // 配置格式
-        $t_page->setConfig('next', '&gt;');
-        $t_page->setConfig('last', '&gt;|');
-        $t_page->setConfig('prev', '&lt;');
-        $t_page->setConfig('first', '|&lt;');
-        $t_page->setConfig('theme', '<div class="col-sm-6 text-left"><ul class="pagination">%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END% </ul></div><div class="col-sm-6 text-right">%HEADER%</div>');
-        $t_page->setConfig('header', '显示开始 %FIRST_ROW% 到 %LAST_ROW% 之 %TOTAL_ROW% （总 %TOTAL_PAGE% 页）');
-        // 生成HTML代码
-        $page_html = $t_page->show();
-        $this->assign('page_html',$page_html);
-
-        $rows = $model->where($cond)->order($sort)->page("$page,$pagesize")->select();
-        $this->assign('rows', $rows);
+        // [1=>[配置项1, 配置项2]
+        // [2=>[配置项3, 配置项4]
+        $this->assign('group_setting',$group_setting);
 
         $this->display();
     }
