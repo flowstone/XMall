@@ -74,6 +74,41 @@ class SettingController extends Controller{
     }
 
     /**
+     * 更新
+     */
+    public function updateAction(){
+        $setting = I('post.setting');
+        $m_setting = M('Setting');
+        //保证多选配置项，存在合理的数据
+        //获得所有的多选配置项ID
+        $cond['type_title'] = 'select-multi';
+        $multi_setting = $m_setting->alias('s')->join('left join __SETTING_TYPE__  st Using(setting_type_id)')->
+            where($cond)->getField('setting_id', true);
+        //判断多选类型的配置项是否出现在用户提交的post数据 中
+        foreach ($multi_setting as $m_setting_id) {
+            if (!isset($setting[$m_setting_id])) {
+                //用户没有选择任何多选选项
+                $setting[$m_setting_id] = '';
+            }
+        }
+        //遍历配置项，更新配置项
+        foreach ($setting as $setting_id => $value) {
+            //如果是数组，多选类型，则将多选逗号连接起来
+            if (is_array($value)) {
+                $value = implode(',', $value);
+            }
+            $m_setting->save(['setting_id'=>$setting_id,'value'=>$value]);
+        }
+
+        //清空所有的配置项缓存
+        //获取所有的配置项的key,key与缓存项的key是对应
+        S(['type'=>'File']);
+        foreach ($m_setting->getField('key', true) as $key) {
+            S('setting_'.$key, null);
+        }
+        $this->redirect('list', [], 0);
+    }
+    /**
      * 编辑
      */
     public function editAction(){
@@ -125,36 +160,6 @@ class SettingController extends Controller{
 
         }
     }
-    /**
-     * ajax的相关请求
-     */
-    public function ajaxAction(){
-        $operate = I('request.operate', null, 'trim');
 
-        if (is_null($operate)) {
-            return ;
-        }
-
-        switch ($operate) {
-            //验证品牌名称唯一的操作
-            case 'checkBrandUnique':
-                //获取填写的品牌名称
-                $title = I('request.title','');
-                $cond['title'] = $title;
-                //判断是否传递了brand_id
-                $brand_id = I('request.brand_id', null);
-                if (!is_null($brand_id)) {
-                    //存在，则匹配与当前ID不相同的记录
-                    $cond['brand_id'] = ['neq', $brand_id];
-                }
-                //获取模型后,利用条件获取匹配的记录数
-                $count = M('Setting')->where($cond)->count();
-                //如果记录数>0,条件为真，说明存在记录，重复，验证未通过，响应false
-                echo $count ? 'false' : 'true';
-             break;
-
-        }
-
-    }
 
 }

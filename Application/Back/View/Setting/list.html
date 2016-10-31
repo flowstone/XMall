@@ -12,7 +12,9 @@
 
                     <!-- <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="('input[name*=\'selected\']:checked').size()>0 && confirm('确认？') ? $('#form-Setting').submit() : false;"> <i class="fa fa-trash-o"></i>
                     </button> -->
-
+                     <button type="submit" data-toggle="tooltip" title="更新" class="btn btn-primary" onclick="">
+                         <i class="fa fa-save"></i>
+                     </button>
                 </div>
                 <h1>配置项管理</h1>
                 <ul class="breadcrumb">
@@ -35,7 +37,7 @@
                 </div>
                 <div class="panel-body">
 
-                    <form action="{:U('multi')}" method="post" enctype="multipart/form-data" id="form-Setting" class="form-horizontal">
+                    <form action="{:U('update')}" method="post" enctype="multipart/form-data" id="form-Setting" class="form-horizontal">
 
                         <ul class="nav nav-tabs">
                         <volist name="group_rows" id="group">

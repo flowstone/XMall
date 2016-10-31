@@ -94,7 +94,9 @@
                                                 <input type="checkbox" name="selected[]" value="{$row['brand_id']}" />
                                             </td>
                                             <td class="text-center">
-                                                <img src="__PUBLIC__/Back/image/avatar.png" alt="HEAD" class="img-thumbnail" style="max-width: 40px"/>
+                                                <img src="<if condition="$row['logo']">__PUBLIC__/Thumb/{$row['logo']}
+                                                <else/>__PUBLIC__/Back/image/avatar.png</if>"
+                                                alt="HEAD" class="img-thumbnail" style="max-width: 40px"/>
                                             </td>
                                             <td class="text-left">{$row['title']}</td>
 
