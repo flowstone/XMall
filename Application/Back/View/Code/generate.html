@@ -71,16 +71,38 @@
 </block>
 
 <block name="bottomJS">
-    <script src="__PUBLIC__/Back/validate/jquery.validate.min.js"></script>
-    <script src="__PUBLIC__/Back/validate/additional-methods.min.js"></script>
-    <script src="__PUBLIC__/Back/validate/localization/messages_zh.min.js"></script>
+    <script src="__PUBLIC__/Back/validation/jquery.validate.min.js"></script>
+    <script src="__PUBLIC__/Back/validation/additional-methods.min.js"></script>
+    <script src="__PUBLIC__/Back/validation/localization/messages_zh.min.js"></script>
 
     <script>
-        $(function() {
+        $(function(){
             $('#form-brand').validate({
-
+                //规则
+                rules:{
+                    module:{
+                        required: true,
+                    },
+                    table:{
+                        required: true,
+                    },
+                    table_title:{
+                        required: true,
+                    }
+                },
+                //错误信息
+                messages:{
+                    module:{
+                        required: '所属模块名不允许为空',
+                    },
+                    table:{
+                        required: '生成CRUD操作的逻辑表名不允许为空',
+                    },
+                    table_title:{
+                        required: '表名-标题不允许为空',
+                    }
+                }
             });
         });
-
     </script>
 </block>
