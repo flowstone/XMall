@@ -70,7 +70,7 @@ class GoodsController extends Controller{
             //税类型
             $this->assign('tax_list', M('Tax')->select());
             //库存状态
-            $this->assign('stock_status', M('StockStatus')->select());
+            $this->assign('stock_status_list', M('StockStatus')->select());
 
             //表单展示
             $this->display();

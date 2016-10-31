@@ -1,15 +1,13 @@
 <Extend name="Layout/Back" />
 
 <block name="content">
-<div id="content">
+  <div id="content">
     <div class="page-header">
       <div class="container-fluid">
         <div class="pull-right">
-          <button type="submit" form="form-Goods" data-toggle="tooltip" title="保存" class="btn btn-primary">
-            <i class="fa fa-save"></i>
+          <button type="submit" form="form-Goods" data-toggle="tooltip" title="保存" class="btn btn-primary"> <i class="fa fa-save"></i>
           </button>
-          <a href="{:U('list')}" data-toggle="tooltip" title="取消" class="btn btn-default">
-            <i class="fa fa-reply"></i>
+          <a href="{:U('list')}" data-toggle="tooltip" title="取消" class="btn btn-default"> <i class="fa fa-reply"></i>
           </a>
         </div>
         <h1>商品</h1>
@@ -37,164 +35,254 @@
               <li class="active">
                 <a href="#tab-general" data-toggle="tab">基本信息</a>
               </li>
+              <li class="">
+                <a href="#tab-description" data-toggle="tab">商品描述</a>
+              </li>
+              <li class="">
+                <a href="#tab-seo" data-toggle="tab">SEO信息</a>
+              </li>
+              <li class="">
+                <a href="#tab-linked" data-toggle="tab">关联项目</a>
+              </li>
+              <li class="">
+                <a href="#tab-property" data-toggle="tab">商品属性</a>
+              </li>
+              <li class="">
+                <a href="#tab-promote" data-toggle="tab">促销活动</a>
+              </li>
+              <li class="">
+                <a href="#tab-price" data-toggle="tab">优惠价格</a>
+              </li>
+              <li class="">
+                <a href="#tab-image" data-toggle="tab">图片设置</a>
+              </li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="tab-general">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-name">商品名称</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="name" value="" placeholder="商品名称" id="input-name" class="form-control" />
+                  </div>
+                </div>
 
-                                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-name">name</label>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-image">商品图片</label>
                   <div class="col-sm-10">
-                    <input type="text" name="name" value="" placeholder="name" id="input-name" class="form-control" />
+                    <input type="file" name="image" />
                   </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-image">image</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="image" value="" placeholder="image" id="input-image" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-image_thumb">image_thumb</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="image_thumb" value="" placeholder="image_thumb" id="input-image_thumb" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
+                </div>
+
+                <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-SKU">SKU</label>
                   <div class="col-sm-10">
                     <input type="text" name="SKU" value="" placeholder="SKU" id="input-SKU" class="form-control" />
                   </div>
-                </div>                <div class="form-group">
+                </div>
+
+                <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-UPC">UPC</label>
                   <div class="col-sm-10">
                     <input type="text" name="UPC" value="" placeholder="UPC" id="input-UPC" class="form-control" />
                   </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-price">price</label>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-price">售价</label>
                   <div class="col-sm-10">
                     <input type="text" name="price" value="" placeholder="price" id="input-price" class="form-control" />
                   </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-quantity">quantity</label>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-quantity">库存</label>
                   <div class="col-sm-10">
-                    <input type="text" name="quantity" value="" placeholder="quantity" id="input-quantity" class="form-control" />
+                    <input type="text" name="quantity" value="" placeholder="库存" id="input-quantity" class="form-control" />
                   </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-minimum">minimum</label>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-minimum">最小起订数量</label>
                   <div class="col-sm-10">
-                    <input type="text" name="minimum" value="" placeholder="minimum" id="input-minimum" class="form-control" />
+                    <input type="text" name="minimum" value="1" placeholder="最少起订数量" id="input-minimum" class="form-control" />
                   </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-subtract">subtract</label>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-subtract">是否扣减库存</label>
                   <div class="col-sm-10">
-                    <input type="text" name="subtract" value="" placeholder="subtract" id="input-subtract" class="form-control" />
+                    <select name="subtract" id="input-subtract" class="form-control">
+                      <option value="1" selected="selected">是</option>
+                      <option value="0">否</option>
+                    </select>
                   </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-is_shipping">is_shipping</label>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-is_shipping">是否可配送</label>
                   <div class="col-sm-10">
-                    <input type="text" name="is_shipping" value="" placeholder="is_shipping" id="input-is_shipping" class="form-control" />
+                    <label class="radio-inline">
+                      <input name="is_shipping" value="1" checked="checked" type="radio">是</label>
+                    <label class="radio-inline">
+                      <input name="is_shipping" value="0" type="radio">否</label>
                   </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-date_available">date_available</label>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-date_available">供货日期</label>
                   <div class="col-sm-10">
                     <input type="text" name="date_available" value="" placeholder="date_available" id="input-date_available" class="form-control" />
                   </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-length">length</label>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-length">尺寸(L x W x H)</label>
                   <div class="col-sm-10">
-                    <input type="text" name="length" value="" placeholder="length" id="input-length" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-width">width</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="width" value="" placeholder="width" id="input-width" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-height">height</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="height" value="" placeholder="height" id="input-height" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-weight">weight</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="weight" value="" placeholder="weight" id="input-weight" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-status">status</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="status" value="" placeholder="status" id="input-status" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-sort_number">sort_number</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="sort_number" value="" placeholder="sort_number" id="input-sort_number" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-description">description</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="description" value="" placeholder="description" id="input-description" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-is_deleted">is_deleted</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="is_deleted" value="" placeholder="is_deleted" id="input-is_deleted" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-meta_title">meta_title</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="meta_title" value="" placeholder="meta_title" id="input-meta_title" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-meta_keywords">meta_keywords</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="meta_keywords" value="" placeholder="meta_keywords" id="input-meta_keywords" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-meta_description">meta_description</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="meta_description" value="" placeholder="meta_description" id="input-meta_description" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-length_unit_id">length_unit_id</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="length_unit_id" value="" placeholder="length_unit_id" id="input-length_unit_id" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-weight_unit_id">weight_unit_id</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="weight_unit_id" value="" placeholder="weight_unit_id" id="input-weight_unit_id" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-tax_id">tax_id</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="tax_id" value="" placeholder="tax_id" id="input-tax_id" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-stock_status_id">stock_status_id</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="stock_status_id" value="" placeholder="stock_status_id" id="input-stock_status_id" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-brand_id">brand_id</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="brand_id" value="" placeholder="brand_id" id="input-brand_id" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-category_id">category_id</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="category_id" value="" placeholder="category_id" id="input-category_id" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-created_at">created_at</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="created_at" value="" placeholder="created_at" id="input-created_at" class="form-control" />
-                  </div>
-                </div>                <div class="form-group">
-                  <label class="col-sm-2 control-label" for="input-updated_at">updated_at</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="updated_at" value="" placeholder="updated_at" id="input-updated_at" class="form-control" />
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <input name="length" value="" placeholder="长" id="input-length" class="form-control" type="text"></div>
+                      <div class="col-sm-4">
+                        <input name="width" value="" placeholder="宽" id="input-width" class="form-control" type="text"></div>
+                      <div class="col-sm-4">
+                        <input name="height" value="" placeholder="高" id="input-height" class="form-control" type="text"></div>
+                    </div>
                   </div>
                 </div>
-   
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-length_unit_id">长度单位</label>
+                  <div class="col-sm-10">
+                    <select name="length_unit_id" id="input-length_unit_id" class="form-control">
+                      <volist name="length_unit_list" id="length_unit">
+                        <option value="{$length_unit['length_unit_id']}">{$length_unit['title']}</option>
+                      </volist>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-weight">重量</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="weight" value="" placeholder="重量" id="input-weight" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-weight_unit_id">重量单位</label>
+                  <div class="col-sm-10">
+                    <select name="weight_unit_id" id="input-weight_unit_id" class="form-control">
+                      <volist name="weight_unit_list" id="weight_unit">
+                        <option value="{$weight_unit['weight_unit_id']}">{$weight_unit['title']}</option>
+                      </volist>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-status">状态</label>
+                  <div class="col-sm-10">
+                    <select name="status" id="input-status" class="form-control">
+                      <option value="1" selected="selected">启用</option>
+                      <option value="0">停用</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-sort_number">排序</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="sort_number" value="0" placeholder="排序" id="input-sort_number" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-tax_id">税类型</label>
+                  <div class="col-sm-10">
+                    <select name="tax_id" id="input-tax_id" class="form-control">
+                      <volist name="tax_list" id="tax">
+                        <option value="{$tax['tax_id']}">{$tax['title']}</option>
+                      </volist>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-stock_status_id">库存状态</label>
+                  <div class="col-sm-10">
+                    <select name="stock_status_id" id="input-stock_status_id" class="form-control">
+                      <volist name="stock_status_list" id="stock_status">
+                        <option value="{$stock_status['stock_status_id']}">{$stock_status['title']}</option>
+                      </volist>
+                    </select>
+                  </div>
+                </div>
+
               </div>
-             
+              <div class="tab-pane" id="tab-description">
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-description">商品描述</label>
+                  <div class="col-sm-10">
+                    <textarea name="description" id="input-description" class="form-control"></textarea>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="tab-seo">
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-meta_title">Meta Tag 标题</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="meta_title" value="" placeholder="Meta Tag 标题" id="input-meta_title" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-meta_keywords">Meta Tag 关键字</label>
+                  <div class="col-sm-10">
+                    <textarea name="meta_keywords" placeholder="Meta Tag 关键字" id="input-meta_keywords" class="form-control" rows="4"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-meta_description">Meta Tag 描述</label>
+                  <div class="col-sm-10">
+                    <textarea name="meta_description" placeholder="Meta Tag 描述" id="input-meta_description" class="form-control" rows="4"></textarea>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="tab-linked">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-brand_id">品牌</label>
+                  <div class="col-sm-10">
+                    <select name="brand_id" id="input-brand_id" class="form-control">
+                      <volist name="brand_list" id="brand">
+                        <option value="{$brand['brand_id']}">{$brand['title']}</option>
+                      </volist>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-category_id">分类</label>
+                  <div class="col-sm-10">
+                    <select name="category_id" id="input-category_id" class="form-control">
+                      <volist name="category_list" id="category">
+                        <option value="{$category['category_id']}">{:str_repeat('-', $category['deep']*2)}{$category['title']}</option>
+                      </volist>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="tab-property"></div>
+              <div class="tab-pane" id="tab-promote"></div>
+              <div class="tab-pane" id="tab-price"></div>
+              <div class="tab-pane" id="tab-image"></div>
+
             </div>
           </form>
         </div>
@@ -204,14 +292,14 @@
 </block>
 
 <block name="bottomJS">
-    <script src="__PUBLIC__/Back/validate/jquery.validate.min.js"></script>
-    <script src="__PUBLIC__/Back/validate/additional-methods.min.js"></script>
-    <script src="__PUBLIC__/Back/validate/localization/messages_zh.min.js"></script>
+  <script src="__PUBLIC__/Back/validate/jquery.validate.min.js"></script>
+  <script src="__PUBLIC__/Back/validate/additional-methods.min.js"></script>
+  <script src="__PUBLIC__/Back/validate/localization/messages_zh.min.js"></script>
 
-    <script>
-    $(function() {
-        $('#form-Goods').validate({});           
-    });
+  <script>
+$(function() {
+$('#form-Goods').validate({});           
+});
 
-    </script>
+</script>
 </block>
