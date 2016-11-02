@@ -108,23 +108,23 @@ class GoodsController extends Controller
             }
             //一次插入多条goods_image数据记录
             M('GoodsImage')->addAll($data_image);
-//
-//            //商品的属性
-//            $attr_list = I('post.attribute');
-//            $value_data = [];
-//            //遍历所有的属性
-//            foreach ($attr_list as $goods_attribute_id => $value) {
-//                if (is_array($value)) {
-//                    $value = implode(',', $value);
-//                }
-//                $value_data[] = [
-//                  'goods_id' => $goods_id,
-//                  'goods_attribute_id' => $goods_attribute_id,
-//                  'value' =>$value,
-//                ];
-//            }
+
+            //商品的属性
+            $attr_list = I('post.attribute');
+            $value_data = [];
+            //遍历所有的属性
+            foreach ($attr_list as $goods_attribute_id => $value) {
+                if (is_array($value)) {
+                    $value = implode(',', $value);
+                }
+                $value_data[] = [
+                  'goods_id' => $goods_id,
+                  'goods_attribute_id' => $goods_attribute_id,
+                  'value' =>$value,
+                ];
+            }
             //建立关联数据
-           // M('GoodsAttributeValue')->addAll($value_data);
+            M('GoodsAttributeValue')->addAll($value_data);
 
             // 日志层面管理
             
@@ -144,7 +144,11 @@ class GoodsController extends Controller
             $this->assign('tax_list', M('Tax')->select());
             // 库存状态
             $this->assign('stock_status_list', M('StockStatus')->select());
-            
+
+            //商品的(类型)属性分组
+            $this->assign('goods_type_list',M('GoodsType')->select());
+            //$result = M('GoodsType')->select();
+            //dump($result);
             // 二: 表单展示
             $this->display();
         }
@@ -300,6 +304,29 @@ class GoodsController extends Controller
                 // 如果记录数>0, 条件为真, 说明存在记录, 重复, 验证未通过, 响应false
                 echo $count ? 'false' : 'true';
             break;
+
+            case 'getAttribute':
+                $cond['goods_type_id'] = I('request.goods_type_id');
+                //当前类型下的全部商品
+                $rows = D('GoodsAttribute')->field('ga.*, gat.title type_title')
+                    ->alias('ga')
+                    ->join('left join __ATTRIBUTE_TYPE__ gat  using(attribute_type_id)')
+                    ->relation(true)
+                    ->where($cond)->select();
+                if ($rows) {
+                    $this->ajaxReturn([
+                        'error'=>0,
+                        'rows'=>$rows,
+                    ]);
+                } else {
+                    $this->ajaxReturn([
+                        'error'=>1,
+                        'errorInfo'=>'查询的数据不存在',
+                    ]);
+                }
+                break;
+
+
         }
     }
 }
