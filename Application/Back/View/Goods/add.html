@@ -265,7 +265,7 @@
                     </select>
                   </div>
                 </div>
-                
+
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-category_id">分类</label>
                   <div class="col-sm-10">
@@ -278,10 +278,58 @@
                 </div>
               </div>
 
-              <div class="tab-pane" id="tab-property"></div>
+              <div class="tab-pane" id="tab-property">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-manufacturer"></label>
+                  <div class="col-sm-1  text-center">选项</div>
+                  <div class="col-sm-9"></div>
+                </div>
+                <div class="form-group">
+                  <label for="input-type-id" class="col-sm-2 control-label">
+                    <span title="" data-toggle="tooltip" data-original-title="不同类型对应不同的属性列表">商品类型</span>
+                  </label>
+                  <div class="col-sm-1"></div>
+                  <div class="col-sm-9">
+                    <select class="form-control" id="input-goods_type_id" name="goods_type_id">
+                      <option value="0">--未选择--</option>
+                      <volist name="goods_type_list" id="goods_type">
+                        <option value="{$goods_type['goods_type_id']}">{$goods_type['title']}</option>
+                      </volist>
+                    </select>
+                  </div>
+                </div>
+
+
+              </div>
+
               <div class="tab-pane" id="tab-promote"></div>
               <div class="tab-pane" id="tab-price"></div>
-              <div class="tab-pane" id="tab-image"></div>
+
+              <div class="tab-pane" id="tab-image">
+                <div class="table-responsive">
+                  <table id="images" class="table table-striped table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <td class="text-left">图片</td>
+                        <td class="text-right">排序</td>
+                        <td></td>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2"></td>
+                        <td class="text-left">
+                          <button type="button" onclick="addImage();" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="添加图片">
+                            <i class="fa fa-plus-circle"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+
+              </div>
 
             </div>
           </form>
@@ -298,7 +346,89 @@
 
   <script>
 $(function() {
-$('#form-Goods').validate({});           
+  $('#form-Goods').validate({});           
+});
+</script>
+
+
+<script type="text/javascript"><!--
+var image_row = 0;
+
+function addImage() {
+  html  = '<tr id="image-row' + image_row + '">';
+  html += '  <td class="text-left"><input type="file" name="goods_image[' + image_row + ']" id="input-image' + image_row + '" /></td>';
+  html += '  <td class="text-right"><input type="text" name="goods_image[' + image_row + '][sort_number]" value="" placeholder="排序" class="form-control" /></td>';
+  html += '  <td class="text-left"><button type="button" onclick="$(\'#image-row' + image_row  + '\').remove();" data-toggle="tooltip" title="移除" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
+  html += '</tr>';
+
+  $('#images tbody').append(html);
+
+  image_row++;
+}
+//--></script>
+
+
+<script>
+$(function() {
+
+  $('#input-goods_type_id').change(function(evt) {
+    // 只要值改变，　都需要清空
+    // 先清空已有的属性, 找到从第三个索引值为2的开始，删除即可
+    $('#tab-property div.form-group:gt(1)').remove();
+
+    var sel = $(this);
+    if (sel.val() == '0') {
+      // 清除当前的选项
+      return ;
+    }
+
+    var url = '{:U('ajax', ['operate'=>'getAttribute'])}';
+    var data = {
+      'goods_type_id': sel.val()
+    };
+    // 发出ajax请求，　获取用户get
+    $.get(url, data, function(response) {
+      if (response.error != 0) {
+        // 有错误
+        console.log(response.errorInfo);
+        return ;
+      }
+
+      
+
+      var rows = response.rows;// 属性列表
+      for(var i=0; i<rows.length; ++i) {
+        var attr = rows[i];
+        var containerDiv = '<div class="form-group">';
+        containerDiv += '<label class="col-sm-2 control-label" for="input-attribute-' + attr.goods_attribute_id +'">' + attr.title + '</label>';
+        containerDiv +='<div class="col-sm-1 text-center">';
+        containerDiv += '<label class="control-label">';
+        containerDiv += '<input type="checkbox" name="is_option[]" value="' + attr.goods_attribute_id + '"  class="form-control"></label>';
+        containerDiv += '</div>';
+        containerDiv += '<div class="col-sm-9">';
+        if (attr.type_title == 'text') {
+          containerDiv += '<input name="attribute[' + attr.goods_attribute_id + ']" value="" placeholder="属性值" id="input-attribute-'+attr.goods_attribute_id+'" class="form-control" type="text">';
+        } else if (attr.type_title == 'select') {
+
+          containerDiv += '<select rows="8" multiple name="attribute[' + attr.goods_attribute_id + '][]" id="input-attribute-'+attr.goods_attribute_id+'" class="form-control">';
+          for(var j=0; j<attr.option.length; ++j) {
+            containerDiv += '<option value="' + attr.option[j].attribute_option_id + '">' + attr.option[j].title + '</option>';
+          }
+          containerDiv += '</select>';
+        }
+
+        containerDiv += '</div>';
+        containerDiv += '</div>';
+
+        // 加入属性容器中
+        $('#tab-property').append(containerDiv);
+      }
+
+    }, 'json');
+
+
+
+  });
 });
 
 </script>

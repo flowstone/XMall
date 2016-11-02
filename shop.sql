@@ -329,3 +329,86 @@ create table yao_goods (
 	unique key (UPC)
 ) charset=utf8;
   insert into yao_goods (name, description, UPC, price, quantity, sort_number, brand_id, category_id, status) values ('Z2', '作为索尼2014年度旗舰手机，索尼Xperia Z2较上一代产品Xperia Z1有了不少升级。屏幕方面，索尼Xperia Z2采用了IPS材质全高清屏幕，尺寸提升至5.2英寸，并采用了“LiveColor LED”显示技术。索尼表示，Xperia Z2的色彩饱和度达到前所未有的程度，屏幕的可视角度比市场上任何设备的可视角度还要很广阔，显示效果甚至 索尼Xperia Z2 索尼Xperia Z2 (7张) 优于iPhone和iPad。外观方面，索尼Xperia Z2与上代产品Xperia Z1相比则没有太大变化，同样采用铝合金框架和双玻璃镜面材质，机身尺寸为146.8x73.3x8.2mm，重163g，有黑色、白色、紫色三种颜色可选。 配置方面，索尼Xperia Z2该机采用5.2英寸1920x1080分辨率IPS屏幕，像素密度为424ppi，搭载最新的高通Snapdragon 801四核处理器，主频达2.3GHz，提供3GB超大内存和16GB存储空间，支持MicroSD卡扩展，配备2070万像素的索尼G镜头和220万像素前置摄像头，内置1/2.3英寸的Exmor RS堆栈式结构传感器，拥有f2.0大光圈和27mm广角，支持4K视频录制，配置3200毫安时（mAh）不可拆卸式电池，运行基于Android 4.4操作系统定制的Xperia界面，支持IP55/58精密防尘防水功能，支持NFC连接，支持TD-LTE/WCDMA/GSM网络等。 此外，索尼Xperia Z2还新增了无线充电、双击唤醒屏幕、手套模式、智能手势等人性化功能，添加了SteadyShot功能，减少用户在拍摄时因手的抖动而引起的成像不清等现象，并加入了S-Front环绕音效和数字降噪技术（配备全新的降噪耳塞，降噪能力达到98%）,在嘈杂的环境下依然可以收听高品质音乐。 作为Xperia Z1的升级版，这款手机搭载了5.2英寸1080p的IPS屏幕，并搭载了索尼顶级电视上才会有的Sony Triluminos Display 特丽魅影原色技术，该技术能在拓展色域的同时，保持颜色的真实自然。2.3GHz主频的骁龙801处理器，3GB的运行内存，装备G镜头2070万像素的堆栈式摄像头以及3200毫安的电池无疑已经达到了当前的顶配。外观上和Xperia Z1还是比较相似。当然同样具备了IP58级别的三防功能', '12345678', 1234, 100, 10, 1, 3, 1);
+
+
+-- 商品图片
+create table yao_goods_image (
+	goods_image_id int unsigned auto_increment,
+	goods_id int unsigned not null default 0, -- 对应商品ID
+	image varchar(255) not null default '', -- 商品原始图像
+	image_small varchar(255) not null default '', -- 商品小图像
+	image_medium varchar(255) not null default '', -- 商品中图像
+	image_big varchar(255) not null default '', -- 商品大图像
+	sort_number int not null default 0, -- 排序
+	primary key (goods_image_id),
+	index (goods_id),
+	index (sort_number)
+) charset=utf8;
+
+
+-- 商品属性类型
+create table yao_goods_type (
+	goods_type_id int unsigned auto_increment,
+	title varchar(32) not null default '', -- 标题
+	primary key (goods_type_id)
+) charset=utf8;
+insert into yao_goods_type values (1, '笔记本');
+insert into yao_goods_type values (2, '眼镜');
+insert into yao_goods_type values (3, '图书');
+
+	-- 商品属性
+create table yao_goods_attribute (
+	goods_attribute_id int unsigned auto_increment,
+	title varchar(32) not null default '', -- 标题
+	sort_number int not null default 0, -- 排序
+	goods_type_id int not null default 0, -- 所属商品类型ID
+	attribute_type_id int not null default 0, -- 所属类型ID
+	primary key (goods_attribute_id),
+	index (goods_type_id),
+	index (attribute_type_id)
+) charset=utf8;
+insert into yao_goods_attribute values (null, '内存', 0, 1, 2);
+insert into yao_goods_attribute values (null, '镜片材质', 0, 2, 1);
+insert into yao_goods_attribute values (null, '镜框材质', 0, 2, 1);
+insert into yao_goods_attribute values (null, '作者', 0, 3, 1);
+insert into yao_goods_attribute values (null, '出版社', 0, 3, 1);
+insert into yao_goods_attribute values (null, '页数', 0, 3, 1);
+
+
+-- 商品与属性关联
+create table yao_goods_attribute_value (
+	goods_attribute_value_id int unsigned auto_increment,
+	goods_id int unsigned not null default 0, -- 商品ID
+	goods_attribute_id int unsigned not null default 0, -- 属性ID
+	value varchar(255) not null default '', -- 商品属性的值
+	is_option tinyint not null default 0, -- 是否是可选项
+	primary key (goods_attribute_value_id),
+	index (goods_id),
+	index (goods_attribute_id)
+) charset=utf8;
+
+
+-- 商品属性类型
+create table yao_attribute_type (
+	attribute_type_id int unsigned auto_increment,
+	title varchar(32) not null default '', -- 类型名
+	primary key (attribute_type_id)
+) charset=utf8;
+insert into yao_attribute_type values (1, 'text'); -- 文本
+insert into yao_attribute_type values (2, 'select'); -- 选择(多选)
+
+-- 商品选项类属性的预设值
+create table yao_attribute_option (
+	attribute_option_id int unsigned auto_increment,
+	goods_attribute_id int unsigned not null default 0, -- 所属的商品属性
+	title varchar(255) not null default '', -- 预设值值部分
+	primary key (attribute_option_id),
+	index (goods_attribute_id)
+) charset=utf8;
+-- // 内存预设值测试数据
+insert into yao_attribute_option values (null, 1, '4G');
+insert into yao_attribute_option values (null, 1, '8G');
+insert into yao_attribute_option values (null, 1, '16G');
+insert into yao_attribute_option values (null, 1, '2G');
+insert into yao_attribute_option values (null, 1, '12G');
+insert into yao_attribute_option values (null, 1, '32G');

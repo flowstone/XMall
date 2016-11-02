@@ -113,6 +113,25 @@ class Upload {
     }
 
     /**
+     * 一次性上传，以数组方式命名的多张图像$_FIES['goods_image']
+     * @param $file
+     */
+    public function uploadMulti($files){
+        $result = [];
+        //获取每个图像的信息,调用uploadOne即可
+        foreach ($files['name'] as $key=>$value) {
+            //拼凑每个图像的信息
+            $file['name'] = $files['name'][$key];
+            $file['type'] = $files['type'][$key];
+            $file['tmp_name'] = $files['tmp_name'][$key];
+            $file['error'] = $files['error'][$key];
+            $file['size'] = $files['size'][$key];
+            $result[$key] = $this->uploadone($file);
+
+        }
+        return $result;
+    }
+    /**
      * 上传文件
      * @param 文件信息数组 $files ，通常是 $_FILES数组
      */
