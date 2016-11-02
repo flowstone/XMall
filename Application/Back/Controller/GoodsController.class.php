@@ -38,17 +38,17 @@ class GoodsController extends Controller
         if (IS_POST) {
             // 数据处理
             // $model = M('Goods');
-//            $model = D('Goods');
-//            $result = $model->create();
-//
-//            if (!$result) {
-//                $this->error('数据添加失败: ' . $model->getError(), U('add'));
-//            }
-//
-//            $result = $model->add();
-//            if (!$result) {
-//                $this->error('数据添加失败:' . $model->getError(), U('add'));
-//            }
+            $model = D('Goods');
+            $result = $model->create();
+
+            if (!$result) {
+                $this->error('数据添加失败: ' . $model->getError(), U('add'));
+            }
+
+            $goods_id = $model->add();
+            if (!$goods_id) {
+                $this->error('数据添加失败:' . $model->getError(), U('add'));
+            }
 
             // 自动更新当前商品对应的索引
             //--------使用索引时启用
@@ -97,17 +97,17 @@ class GoodsController extends Controller
                 $t_image->thumb($w_b,$h_b)->save($thumb_root.$b_file);
 
                 //拼凑，需要插入到数据表goods_image中的数据
-//                $data_image[] = [
-//                    'goods_id' => $goods_id,
-//                    'image' =>$image['savepath'].$image['savename'],
-//                    'image_small' => $s_file,
-//                    'image_medium' => $m_file,
-//                    'image_big' => $b_file,
-//                    'sort_number' => I('post.goods_image.'.$key.'.sort_number');
-//                ];
+                $data_image[] = [
+                    'goods_id' => $goods_id,
+                    'image' =>$image['savepath'].$image['savename'],
+                    'image_small' => $s_file,
+                    'image_medium' => $m_file,
+                    'image_big' => $b_file,
+                    'sort_number' => I('post.goods_image.'.$key.'.sort_number'),
+                ];
             }
             //一次插入多条goods_image数据记录
-//            M('GoodsImage')->addAll($data_image);
+            M('GoodsImage')->addAll($data_image);
 //
 //            //商品的属性
 //            $attr_list = I('post.attribute');
