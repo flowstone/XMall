@@ -412,3 +412,27 @@ insert into yao_attribute_option values (null, 1, '16G');
 insert into yao_attribute_option values (null, 1, '2G');
 insert into yao_attribute_option values (null, 1, '12G');
 insert into yao_attribute_option values (null, 1, '32G');
+
+-- 货品表
+create table yao_goods_product
+(
+	goods_product_id int unsigned auto_increment,
+	goods_id int unsigned not null default 0,
+	product_quantity int not null default 0,
+	product_price decimal(10, 2) not null default 0.0,
+	price_operate enum('=', '-', '+') not null default '+',
+	enabled tinyint not null default 1,
+	primary key (goods_product_id),
+	index (goods_id)
+) charset=utf8;
+
+-- 货品选项表
+create table yao_product_option
+(
+	product_option_id int unsigned auto_increment,
+	goods_product_id int unsigned not null default 0,
+	attribute_option_id int unsigned not null default 0,
+	primary key (product_option_id),
+	index (goods_product_id),
+	index (attribute_option_id)
+)charset=utf8;

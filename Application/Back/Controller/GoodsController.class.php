@@ -45,10 +45,10 @@ class GoodsController extends Controller
                 $this->error('数据添加失败: ' . $model->getError(), U('add'));
             }
 
-            $goods_id = $model->add();
-            if (!$goods_id) {
+            //$goods_id = $model->add();
+            /*if (!$goods_id) {
                 $this->error('数据添加失败:' . $model->getError(), U('add'));
-            }
+            }*/
 
             // 自动更新当前商品对应的索引
             //--------使用索引时启用
@@ -107,20 +107,55 @@ class GoodsController extends Controller
                 ];
             }
             //一次插入多条goods_image数据记录
-            M('GoodsImage')->addAll($data_image);
+           // M('GoodsImage')->addAll($data_image);
+
 
             //商品的属性
             $attr_list = I('post.attribute');
             $value_data = [];
             //遍历所有的属性
             foreach ($attr_list as $goods_attribute_id => $value) {
+               //判断是否用户自定义的多值属性
+                $m_attr_option = M('AttributeOption');
+                if (is_string($value) && strpos($value, '|||')!== false) {
+                    //是多值自定义属性
+                    $option_data['goods_attribute_id'] = $goods_attribute_id;
+                    //遍历使用|||分割的选项内容，逐条插入
+                    foreach (explode('|||',$value) as $option_title) {
+                        $option_data['title'] = $option_title;
+                        //判断当前的选项值是否存在
+                        $cond = $option_data;
+                        if ($attribute_option_id = $m_attr_option->where($cond)
+                        ->getField('attribute_option_id')) {
+                            //将找到的ID，存储属性值ID数组中
+                            $new_option_id[] = $attribute_option_id;
+                            //不需要继续添加了
+                            continue;
+                        }
+                        //获取每个属性选项的ID
+                        $new_option_id[] = $m_attr_option->add($option_data);
+                    }
+
+                    //将value设置数组类型，下面的连接就可以通用
+                    $value = $new_option_id;
+                }
+                //是否为多选列表数组型
+                $is_option = 0; //初始化为非选项
                 if (is_array($value)) {
                     $value = implode(',', $value);
+
+                    //是多值属性，判断是否为选项
+                    $is_option_list = I('post.is_option',[]);
+                    if (in_array($goods_attribute_id, $is_option_list)) {
+                        //是选项
+                        $is_option = 1;
+                    }
                 }
                 $value_data[] = [
-                  'goods_id' => $goods_id,
+                  //'goods_id' => $goods_id,
                   'goods_attribute_id' => $goods_attribute_id,
                   'value' =>$value,
+                  'is_option'=>$is_option,
                 ];
             }
             //建立关联数据
