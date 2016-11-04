@@ -45,10 +45,10 @@ class GoodsController extends Controller
                 $this->error('数据添加失败: ' . $model->getError(), U('add'));
             }
 
-            //$goods_id = $model->add();
-            /*if (!$goods_id) {
+            $goods_id = $model->add();
+            if (!$goods_id) {
                 $this->error('数据添加失败:' . $model->getError(), U('add'));
-            }*/
+            }
 
             // 自动更新当前商品对应的索引
             //--------使用索引时启用
@@ -107,7 +107,7 @@ class GoodsController extends Controller
                 ];
             }
             //一次插入多条goods_image数据记录
-           // M('GoodsImage')->addAll($data_image);
+            M('GoodsImage')->addAll($data_image);
 
 
             //商品的属性
@@ -152,7 +152,7 @@ class GoodsController extends Controller
                     }
                 }
                 $value_data[] = [
-                  //'goods_id' => $goods_id,
+                  'goods_id' => $goods_id,
                   'goods_attribute_id' => $goods_attribute_id,
                   'value' =>$value,
                   'is_option'=>$is_option,
