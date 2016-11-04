@@ -42,7 +42,7 @@
                                     <select name="filter_goods_type_id" class="form-control">
                                         <option value="0">--ALL--</option>
                                         <volist name="goods_type_list" id="goods_type">
-                                            <option value="{$goods_type['goods_type_id']}" 
+                                            <option value="{$goods_type['goods_type_id']}"
                                                 <if condition="$filter['filter_goods_type_id'] eq $goods_type['goods_type_id']">
                                                     selected
                                                 </if>>{$goods_type['title']}

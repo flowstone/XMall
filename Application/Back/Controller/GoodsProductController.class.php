@@ -9,45 +9,27 @@ namespace Back\Controller;
 use Think\Controller;
 use Think\Page;
 
-class GoodsAttributeController extends Controller{
+class GoodsProductController extends Controller{
 
     public function addAction(){
         //判断是否为POST数据提交
         if (IS_POST) {
           //数据处理
-            $model = D('GoodsAttribute');
+            $model = D('GoodsProduct');
             $result = $model->create();
 
             if (!$result) {
                 $this->error('数据添加失败：'.$model->getError(),U('add'));
             }
 
-            $goods_attribute_id = $model->add();
-            if (!$goods_attribute_id) {
+            $result = $model->add();
+            if (!$result) {
                 $this->error('数据添加失败：'.$model->getError(),U('add'));
             }
 
-            //添加属性成功后,处理选项类属性预设值
-            $attribute_option = I('post.attribute_option', '');
-            // 拆分, \n(linux) 或 \r\n(win), 换行符在两种系统中是不同的
-            // 可以使用正则分割
-            $pattern = '/\r\n|\n/';
-            //preg_split() 正则匹配分割
-            $option_list = preg_split($pattern, $attribute_option);
-            //use 导入所在作用域的变量到匿名函数中
-            $option_data = array_map(function($title) use($goods_attribute_id) {
-                return [
-                    'goods_attribute_id' => $goods_attribute_id,
-                    'title' => $title,
-                ];
-            }, $option_list);
-            M('AttributeOption')->addAll($option_data);
             //成功重定向到list页
             $this->redirect('list',[],0);
         } else {
-            //商品类型列表
-            $this->assign('goods_type_list', M('GoodsType')->select());
-            $this->assign('attribute_type_list',M('AttributeType')->select());
             //表单展示
             $this->display();
         }
@@ -60,17 +42,11 @@ class GoodsAttributeController extends Controller{
     public function listAction(){
         //分页、搜索、排序
 
-        $model = M('GoodsAttribute');
-        //商品类型列表
-        $this->assign('goods_type_list', M('GoodsType')->select());
+        $model = M('GoodsProduct');
         $cond = $filter = []; //初始条件
         /*
            在生成代码的基础上，自定义完成搜索条件
         */
-        $filter['filter_goods_type_id'] = I('get.filter_goods_type_id', 0);
-        if ($filter['filter_goods_type_id'] != 0) {
-            $cond['goods_type_id'] = $filter['filter_goods_type_id'];
-        }
         //分配筛选数据，到模板，为了展示搜索条件
         $this->assign('filter', $filter);
 
@@ -116,7 +92,7 @@ class GoodsAttributeController extends Controller{
      */
     public function editAction(){
         if (IS_POST) {
-            $model = D('GoodsAttribute');
+            $model = D('GoodsProduct');
             $result = $model->create();
 
             if (!$result) {
@@ -130,8 +106,8 @@ class GoodsAttributeController extends Controller{
             $this->redirect('list',[],0);
         } else {
             //获取当前编辑的内容
-            $goods_attribute_id = I('get.goods_attribute_id','','trim');
-            $this->assign('row',M('GoodsAttribute')->find($goods_attribute_id));
+            $goods_product_id = I('get.goods_product_id','','trim');
+            $this->assign('row',M('GoodsProduct')->find($goods_product_id));
 
             //展示模板
             $this->display();
@@ -154,8 +130,8 @@ class GoodsAttributeController extends Controller{
         switch ($operate) {
             case 'delete' :
                 //使用in条件，删除全部的品牌
-                $cond = ['goods_attribute_id'=>['in',$selected]];
-                M('GoodsAttribute')->where($cond)->delete();
+                $cond = ['goods_product_id'=>['in',$selected]];
+                M('GoodsProduct')->where($cond)->delete();
                 $this->redirect('list', [], 0);
                 break;
             default:
@@ -186,7 +162,7 @@ class GoodsAttributeController extends Controller{
                     $cond['brand_id'] = ['neq', $brand_id];
                 }
                 //获取模型后,利用条件获取匹配的记录数
-                $count = M('GoodsAttribute')->where($cond)->count();
+                $count = M('GoodsProduct')->where($cond)->count();
                 //如果记录数>0,条件为真，说明存在记录，重复，验证未通过，响应false
                 echo $count ? 'false' : 'true';
              break;

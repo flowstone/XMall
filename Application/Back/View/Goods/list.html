@@ -84,17 +84,7 @@
                                             <a href="{:U('list', $filter+['field'=>'name', 'type'=>'asc'])}" class="">name</a>
                                         </if>
                                         </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'image' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'image', 'type'=>'desc'])}" class="asc">image</a>
-                                        <elseif condition="$order['field'] eq 'image' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'image', 'type'=>'asc'])}" class="desc">image</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'image', 'type'=>'asc'])}" class="">image</a>
-                                        </if>
-                                        </td>
-                                                                                
+                                                                               
                                         <td class="text-left">
                                         <if condition="$order['field'] eq 'image_thumb' AND $order['type'] eq 'asc'">
                                             <a href="{:U('list', $filter+['field'=>'image_thumb', 'type'=>'desc'])}" class="asc">image_thumb</a>
@@ -104,17 +94,7 @@
                                             <a href="{:U('list', $filter+['field'=>'image_thumb', 'type'=>'asc'])}" class="">image_thumb</a>
                                         </if>
                                         </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'SKU' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'SKU', 'type'=>'desc'])}" class="asc">SKU</a>
-                                        <elseif condition="$order['field'] eq 'SKU' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'SKU', 'type'=>'asc'])}" class="desc">SKU</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'SKU', 'type'=>'asc'])}" class="">SKU</a>
-                                        </if>
-                                        </td>
-                                                                                
+                                                                                                                    
                                         <td class="text-left">
                                         <if condition="$order['field'] eq 'UPC' AND $order['type'] eq 'asc'">
                                             <a href="{:U('list', $filter+['field'=>'UPC', 'type'=>'desc'])}" class="asc">UPC</a>
@@ -144,87 +124,7 @@
                                             <a href="{:U('list', $filter+['field'=>'quantity', 'type'=>'asc'])}" class="">quantity</a>
                                         </if>
                                         </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'minimum' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'minimum', 'type'=>'desc'])}" class="asc">minimum</a>
-                                        <elseif condition="$order['field'] eq 'minimum' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'minimum', 'type'=>'asc'])}" class="desc">minimum</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'minimum', 'type'=>'asc'])}" class="">minimum</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'subtract' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'subtract', 'type'=>'desc'])}" class="asc">subtract</a>
-                                        <elseif condition="$order['field'] eq 'subtract' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'subtract', 'type'=>'asc'])}" class="desc">subtract</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'subtract', 'type'=>'asc'])}" class="">subtract</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'is_shipping' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'is_shipping', 'type'=>'desc'])}" class="asc">is_shipping</a>
-                                        <elseif condition="$order['field'] eq 'is_shipping' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'is_shipping', 'type'=>'asc'])}" class="desc">is_shipping</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'is_shipping', 'type'=>'asc'])}" class="">is_shipping</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'date_available' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'date_available', 'type'=>'desc'])}" class="asc">date_available</a>
-                                        <elseif condition="$order['field'] eq 'date_available' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'date_available', 'type'=>'asc'])}" class="desc">date_available</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'date_available', 'type'=>'asc'])}" class="">date_available</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'length' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'length', 'type'=>'desc'])}" class="asc">length</a>
-                                        <elseif condition="$order['field'] eq 'length' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'length', 'type'=>'asc'])}" class="desc">length</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'length', 'type'=>'asc'])}" class="">length</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'width' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'width', 'type'=>'desc'])}" class="asc">width</a>
-                                        <elseif condition="$order['field'] eq 'width' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'width', 'type'=>'asc'])}" class="desc">width</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'width', 'type'=>'asc'])}" class="">width</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'height' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'height', 'type'=>'desc'])}" class="asc">height</a>
-                                        <elseif condition="$order['field'] eq 'height' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'height', 'type'=>'asc'])}" class="desc">height</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'height', 'type'=>'asc'])}" class="">height</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'weight' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'weight', 'type'=>'desc'])}" class="asc">weight</a>
-                                        <elseif condition="$order['field'] eq 'weight' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'weight', 'type'=>'asc'])}" class="desc">weight</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'weight', 'type'=>'asc'])}" class="">weight</a>
-                                        </if>
-                                        </td>
-                                                                                
+                                                                                                                      
                                         <td class="text-left">
                                         <if condition="$order['field'] eq 'status' AND $order['type'] eq 'asc'">
                                             <a href="{:U('list', $filter+['field'=>'status', 'type'=>'desc'])}" class="asc">status</a>
@@ -245,86 +145,7 @@
                                         </if>
                                         </td>
                                                                                 
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'description' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'description', 'type'=>'desc'])}" class="asc">description</a>
-                                        <elseif condition="$order['field'] eq 'description' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'description', 'type'=>'asc'])}" class="desc">description</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'description', 'type'=>'asc'])}" class="">description</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'is_deleted' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'is_deleted', 'type'=>'desc'])}" class="asc">is_deleted</a>
-                                        <elseif condition="$order['field'] eq 'is_deleted' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'is_deleted', 'type'=>'asc'])}" class="desc">is_deleted</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'is_deleted', 'type'=>'asc'])}" class="">is_deleted</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'meta_title' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'meta_title', 'type'=>'desc'])}" class="asc">meta_title</a>
-                                        <elseif condition="$order['field'] eq 'meta_title' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'meta_title', 'type'=>'asc'])}" class="desc">meta_title</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'meta_title', 'type'=>'asc'])}" class="">meta_title</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'meta_keywords' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'meta_keywords', 'type'=>'desc'])}" class="asc">meta_keywords</a>
-                                        <elseif condition="$order['field'] eq 'meta_keywords' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'meta_keywords', 'type'=>'asc'])}" class="desc">meta_keywords</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'meta_keywords', 'type'=>'asc'])}" class="">meta_keywords</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'meta_description' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'meta_description', 'type'=>'desc'])}" class="asc">meta_description</a>
-                                        <elseif condition="$order['field'] eq 'meta_description' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'meta_description', 'type'=>'asc'])}" class="desc">meta_description</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'meta_description', 'type'=>'asc'])}" class="">meta_description</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'length_unit_id' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'length_unit_id', 'type'=>'desc'])}" class="asc">length_unit_id</a>
-                                        <elseif condition="$order['field'] eq 'length_unit_id' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'length_unit_id', 'type'=>'asc'])}" class="desc">length_unit_id</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'length_unit_id', 'type'=>'asc'])}" class="">length_unit_id</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'weight_unit_id' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'weight_unit_id', 'type'=>'desc'])}" class="asc">weight_unit_id</a>
-                                        <elseif condition="$order['field'] eq 'weight_unit_id' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'weight_unit_id', 'type'=>'asc'])}" class="desc">weight_unit_id</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'weight_unit_id', 'type'=>'asc'])}" class="">weight_unit_id</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'tax_id' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'tax_id', 'type'=>'desc'])}" class="asc">tax_id</a>
-                                        <elseif condition="$order['field'] eq 'tax_id' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'tax_id', 'type'=>'asc'])}" class="desc">tax_id</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'tax_id', 'type'=>'asc'])}" class="">tax_id</a>
-                                        </if>
-                                        </td>
-                                                                                
+                                                                                                                      
                                         <td class="text-left">
                                         <if condition="$order['field'] eq 'stock_status_id' AND $order['type'] eq 'asc'">
                                             <a href="{:U('list', $filter+['field'=>'stock_status_id', 'type'=>'desc'])}" class="asc">stock_status_id</a>
@@ -335,46 +156,7 @@
                                         </if>
                                         </td>
                                                                                 
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'brand_id' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'brand_id', 'type'=>'desc'])}" class="asc">brand_id</a>
-                                        <elseif condition="$order['field'] eq 'brand_id' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'brand_id', 'type'=>'asc'])}" class="desc">brand_id</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'brand_id', 'type'=>'asc'])}" class="">brand_id</a>
-                                        </if>
-                                        </td>
                                                                                 
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'category_id' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'category_id', 'type'=>'desc'])}" class="asc">category_id</a>
-                                        <elseif condition="$order['field'] eq 'category_id' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'category_id', 'type'=>'asc'])}" class="desc">category_id</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'category_id', 'type'=>'asc'])}" class="">category_id</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'created_at' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'created_at', 'type'=>'desc'])}" class="asc">created_at</a>
-                                        <elseif condition="$order['field'] eq 'created_at' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'created_at', 'type'=>'asc'])}" class="desc">created_at</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'created_at', 'type'=>'asc'])}" class="">created_at</a>
-                                        </if>
-                                        </td>
-                                                                                
-                                        <td class="text-left">
-                                        <if condition="$order['field'] eq 'updated_at' AND $order['type'] eq 'asc'">
-                                            <a href="{:U('list', $filter+['field'=>'updated_at', 'type'=>'desc'])}" class="asc">updated_at</a>
-                                        <elseif condition="$order['field'] eq 'updated_at' AND $order['type'] eq 'desc'" />
-                                            <a href="{:U('list', $filter+['field'=>'updated_at', 'type'=>'asc'])}" class="desc">updated_at</a>
-                                        <else />
-                                            <a href="{:U('list', $filter+['field'=>'updated_at', 'type'=>'asc'])}" class="">updated_at</a>
-                                        </if>
-                                        </td>
-                                        
                                         <td class="text-right">管理</td>
                                     </tr>
                                 </thead>
@@ -385,13 +167,34 @@
                                                 <input type="checkbox" name="selected[]" value="{$row['goods_id']}" />
                                             </td>
 
-                                            <td class="text-left">{$row['goods_id']}</td><td class="text-left">{$row['name']}</td><td class="text-left">{$row['image']}</td><td class="text-left">{$row['image_thumb']}</td><td class="text-left">{$row['sku']}</td><td class="text-left">{$row['upc']}</td><td class="text-left">{$row['price']}</td><td class="text-left">{$row['quantity']}</td><td class="text-left">{$row['minimum']}</td><td class="text-left">{$row['subtract']}</td><td class="text-left">{$row['is_shipping']}</td><td class="text-left">{$row['date_available']}</td><td class="text-left">{$row['length']}</td><td class="text-left">{$row['width']}</td><td class="text-left">{$row['height']}</td><td class="text-left">{$row['weight']}</td><td class="text-left">{$row['status']}</td><td class="text-left">{$row['sort_number']}</td><td class="text-left">{$row['description']}</td><td class="text-left">{$row['is_deleted']}</td><td class="text-left">{$row['meta_title']}</td><td class="text-left">{$row['meta_keywords']}</td><td class="text-left">{$row['meta_description']}</td><td class="text-left">{$row['length_unit_id']}</td><td class="text-left">{$row['weight_unit_id']}</td><td class="text-left">{$row['tax_id']}</td><td class="text-left">{$row['stock_status_id']}</td><td class="text-left">{$row['brand_id']}</td><td class="text-left">{$row['category_id']}</td><td class="text-left">{$row['created_at']}</td><td class="text-left">{$row['updated_at']}</td>
+                                            <td class="text-left">{$row['goods_id']}</td>
+
+                                            <td class="text-left">{$row['name']}</td>
+
+                                            <td class="text-left">{$row['image_thumb']}</td>
+
+                                            <td class="text-left">{$row['upc']}</td>
+
+                                            <td class="text-left">{$row['price']}</td>
+
+                                            <td class="text-left">{$row['quantity']}</td>
+
+                                            <td class="text-left">{$row['status']}</td>
+
+                                            <td class="text-left">{$row['sort_number']}</td>
+                                            <td class="text-left">{$row['stock_status_id']}</td>
 
                                             <td class="text-right">
                                                 <a href="{:U('edit', ['goods_id'=>
                                                     $row['goods_id']])}" data-toggle="tooltip" title="编辑" class="btn btn-primary">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
+
+                                                 <a href="{:U('GoodsProduct/list', ['goods_id'=>
+                                                    $row['goods_id']])}" data-toggle="tooltip" title="货品管理" class="btn btn-primary">
+                                                    货
+                                                </a>
+
                                             </td>
                                         </tr>
                                     </volist>

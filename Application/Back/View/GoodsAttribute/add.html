@@ -46,7 +46,8 @@
                   <div class="col-sm-10">
                     <input type="text" name="title" value="" placeholder="title" id="input-title" class="form-control" />
                   </div>
-                </div>                <div class="form-group">
+                </div>                
+                <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-sort_number">sort_number</label>
                   <div class="col-sm-10">
                     <input type="text" name="sort_number" value="" placeholder="sort_number" id="input-sort_number" class="form-control" />
@@ -54,14 +55,32 @@
                 </div>                <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-goods_type_id">goods_type_id</label>
                   <div class="col-sm-10">
-                    <input type="text" name="goods_type_id" value="" placeholder="goods_type_id" id="input-goods_type_id" class="form-control" />
+                    <select name="goods_type_id" id="select-goods_type_id" class="form-control">
+                      <volist name="goods_type_list" id="goods_type">
+                        <option value="{$goods_type['goods_type_id']}">{$goods_type['title']}</option>
+                      </volist>
+                    </select>
+                    
                   </div>
-                </div>                <div class="form-group">
+                </div>                
+
+                <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-attribute_type_id">attribute_type_id</label>
                   <div class="col-sm-10">
-                    <input type="text" name="attribute_type_id" value="" placeholder="attribute_type_id" id="input-attribute_type_id" class="form-control" />
+                    <select name="attribute_type_id" id="select-attribute_type_id" class="form-control">
+                      <volist name="attribute_type_list" id="attribute_type">
+                        <option value="{$attribute_type['attribute_type_id']}">{$attribute_type['title']}</option>
+                      </volist>
+                    </select>
                   </div>
                 </div>
+
+                <div class="form-group" id="div-attribute_option" style="display: none;">
+                  <label class="col-sm-2 control-label" for="input-sort_number">属性选项预设值</label>
+                  <div class="col-sm-10">
+                    <textarea id="textarea-attribute_option" name="attribute_option" class="form-control" ></textarea>
+                  </div>
+                </div>  
    
               </div>
              
@@ -78,10 +97,24 @@
     <script src="__PUBLIC__/Back/validate/additional-methods.min.js"></script>
     <script src="__PUBLIC__/Back/validate/localization/messages_zh.min.js"></script>
 
-    <script>
+   <!-- <script>
     $(function() {
         $('#form-GoodsAttribute').validate({});           
     });
+    </script>-->
+
+    <script>
+    $(function() {
+      $('#select-attribute_type_id').change(function(evt) {
+        if ($(this).find('option:selected').text() == 'select') {
+          $('#div-attribute_option').show();
+          $('#textarea-attribute_option').prop('disabled', false);
+        } else {
+          $('#div-attribute_option').hide();
+          $('#textarea-attribute_option').prop('disabled', true);
+        }
+      });
+    })
 
     </script>
 </block>
