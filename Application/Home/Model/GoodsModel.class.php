@@ -16,13 +16,16 @@ class GoodsModel extends Model{
         $max_goods_id = $this->max('goods_id');
         $promote_number = getConfig('promote_goods_number', 4);
         //获得随机的商品ID
-        for($i=1,$n=$promote_number*3; $i<=$n; ++$i) { //备容错
+        for($i=1,$n=$promote_number*10; $i<=$n; ++$i) { //备容错
             $rand_id[] = mt_rand(1, $max_goods_id);
         }
+        //dump($rand_id);
 
-        //利用随机的ID，获取商品
+
+        //利用随机的ID，获取商品,如果数据少，生成的推荐商品将少于4个
         $list = $this->where(['is_deleted'=>0, 'status'=>1, 'goods_id'=>['in',$rand_id]])
             ->limit($promote_number)->select();
+
         return $list;
     }
 
