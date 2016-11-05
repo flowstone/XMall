@@ -8,8 +8,7 @@
                 <div class="pull-right">
                     <button type="submit" form="form-GoodsProduct" data-toggle="tooltip" title="保存" class="btn btn-primary"><i class="fa fa-save"></i></button>
 
-                    <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="('input[name*=\'selected\']:checked').size()>
-                        0 && confirm('确认？') ? $('#form-GoodsProduct').submit() : false;"> <i class="fa fa-trash-o"></i>
+                    <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" id="button-delete"> <i class="fa fa-trash-o"></i>
                     </button>
 
                 </div>
@@ -183,5 +182,41 @@ $(function() {
 });
 
 </script>
-
+<!--删除货品ajax-->
+ <script>
+    $(function(){
+        $('#button-delete').click(function (evt) {
+            //alert('.....');
+            //获取选中的货品ID
+            var selected = $('input[name*=\'selected\']:checked');
+            //获得第一个jquery对象值
+            var selectedID = [];
+            selected.each(function (i) {
+                //元素入(数组)栈
+                selectedID.push($(this).val());
+            });
+            if (selectedID.length == 0) {
+                return ;
+            }
+            //二：向服务器发送ajax请求，删除数据库中货品
+            var url = "{:U('ajax',['operate'=>'delete'])}";
+            var data = {
+                'goods_product_id': selectedID,
+            };
+            $.post(url, data, function (response) {
+                //三：如果服务器删除成，将页面的tr清除掉
+                if (response.error == 0) {
+                    //没错成功
+                    //遍历数组，获取每个选中的ID值
+                    $.each(selected, function (index, value) {
+                        //index索引， value元素值
+                        $('#option-value-row-'+value).remove();
+                    });
+                } else {
+                    console.log(response.errorInfo);
+                }
+            }, 'json');
+        });
+    });
+ </script>
 </block>

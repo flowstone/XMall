@@ -214,23 +214,18 @@ class GoodsProductController extends Controller{
         }
 
         switch ($operate) {
-            //验证品牌名称唯一的操作
-            case 'checkBrandUnique':
-                //获取填写的品牌名称
-                $title = I('request.title','');
-                $cond['title'] = $title;
-                //判断是否传递了brand_id
-                $brand_id = I('request.brand_id', null);
-                if (!is_null($brand_id)) {
-                    //存在，则匹配与当前ID不相同的记录
-                    $cond['brand_id'] = ['neq', $brand_id];
+            //删除货品
+            case 'delete':
+                $goods_product_id = I('request.goods_product_id', []);
+                if (empty($goods_product_id)) {
+                    $this->ajaxReturn(['error'=>0]);
                 }
-                //获取模型后,利用条件获取匹配的记录数
-                $count = M('GoodsProduct')->where($cond)->count();
-                //如果记录数>0,条件为真，说明存在记录，重复，验证未通过，响应false
-                echo $count ? 'false' : 'true';
-             break;
-
+                if (M('GoodsProduct')->delete(implode(',', $goods_product_id))){
+                    $this->ajaxReturn(['error'=>0]);
+                } else {
+                    $this->ajaxReturn(['error'=>1, 'errorInfo'=>M('GoodsProduct')->getError()]);
+                }
+            break;
         }
 
     }
