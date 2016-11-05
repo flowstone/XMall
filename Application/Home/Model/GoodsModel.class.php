@@ -10,6 +10,10 @@ use Think\Model;
 
 class GoodsModel extends Model{
 
+    /**
+     * 推荐商品
+     * @return mixed
+     */
     public function getPromote(){
         //确定推荐商品的条件
         //随机推荐
@@ -29,7 +33,31 @@ class GoodsModel extends Model{
         return $list;
     }
 
+    /**
+     * 最新商品
+     */
+    public function getNew(){
 
+        $new_number = getConfig('new_goods_number', 8);
+        $list = $this->where(['is_deleted'=>0, 'status'=>1])
+            ->order('created_at desc')
+            ->limit($new_number)->select();
+       // dump($list);
+        return $list;
+    }
+
+    /**
+     * 特价商品(最低价格)
+     */
+    public function getOffers(){
+
+        $offers_number = getConfig('offers_goods_number', 4);
+        $list = $this->where(['is_deleted'=>0, 'status'=>1])
+            ->order('price asc')
+            ->limit($offers_number)->select();
+        // dump($list);
+        return $list;
+    }
     /**
      * 获得该商品的导航数据
      * @param $goods_id

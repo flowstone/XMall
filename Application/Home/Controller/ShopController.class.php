@@ -24,7 +24,10 @@ class ShopController extends CommonController{
         //推荐商品数据
         $m_goods = D('Goods');
         $this->assign('promote_goods_list', $m_goods->getPromote());
-
+        //最新商品数据
+        $this->assign('new_goods_list', $m_goods->getNew());
+        //特价商品数据
+        $this->assign('offers_goods_list', $m_goods->getOffers());
         //展示首页模板
         $this->display();
     }

@@ -92,7 +92,76 @@
         </div>
 
     </div>
-
+    <ul id="banner0" class="banners">
+        <li class="item">
+            <a href="">
+                <img src="__PUBLIC__/Home/image/hengfu1-1140x382.jpg" alt="hengfu-xia" class="img-responsive">
+            </a>
+        </li>
+    </ul>
+    <h2 class="widget-title">
+        <span>最新商品</span>
+    </h2>
+    <div class="row">
+        <!--最新商品开始-->
+        <volist name="new_goods_list" id="row">
+            <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="product-wrapper">
+                <div class="product-image">
+                    <a href="{:U('/goods/'.$row['goods_id'])}">
+                        <img src="__PUBLIC__/Home/image/goods-image-demo.jpg" alt="{$row['name']}" title="{$row['name']}" class="img-responsive">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <a href="{:U('/goods/'.$row['goods_id'])}">{$row['name']}</a>
+                    </div>
+                    <div class="product-description">
+                        <p>..</p>
+                    </div>
+                    <div class="product-rating">
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-new">￥2,999.00</span>
+                        <span class="price-old">￥3,799.00</span>
+                    </div>
+                    <div class="product-action">
+                        <button type="button" class="add-to-cart" onclick="cart.add('80');">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>加入购物车</span>
+                        </button>
+                        <div class="ps-add-buyincang" id="btn-visible">
+                            <button type="button" class="wishlist" onclick="wishlist.add('80');">
+                                <i class="fa fa-heart-o"></i>
+                                <span>收藏</span>
+                            </button>
+                            <button type="button" class="compare" onclick="compare.add('80');">
+                                <i class="fa fa-bars"></i>
+                                <span>对比</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </volist>
+         <!--最新商品结束-->
+    </div>
     <ul id="banner1" class="banners">
         <li class="item">
             <a href="{:U('/goods/42')}">
@@ -100,8 +169,67 @@
             </a>
         </li>
     </ul>
-
-
+    <h2 class="widget-title">
+        <span>特价商品</span>
+    </h2>
+    <div class="row">
+        <volist name="offers_goods_list" id="row">
+            <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="product-wrapper">
+                <div class="product-image">
+                    <a href="{:U('/goods/'.$row['goods_id'])}">
+                        <img src="__PUBLIC__/Home/image/goods-image-demo.jpg" alt="{$row['name']}" title="{$row['name']}" class="img-responsive">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <div class="product-name">
+                        <a href="{:U('/goods/'.$row['goods_id'])}">{$row['name']}</a>
+                    </div>
+                    <div class="product-description">
+                        <p>..</p>
+                    </div>
+                    <div class="product-rating">
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                        <span class="fa fa-stack">
+                          <i class="fa fa-star fa-stack-2x"></i>
+                        </span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-new">￥{$row['price']|number_format}.00</span>
+                        <span class="price-old">￥8,867.00</span>
+                    </div>
+                    <div class="product-action">
+                        <button type="button" class="add-to-cart" onclick="cart.add('71');">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>加入购物车</span>
+                        </button>
+                        <div class="ps-add-buyincang" id="btn-visible">
+                            <button type="button" class="wishlist" onclick="wishlist.add('71');">
+                                <i class="fa fa-heart-o"></i>
+                                <span>收藏</span>
+                            </button>
+                            <button type="button" class="compare" onclick="compare.add('71');">
+                                <i class="fa fa-bars"></i>
+                                <span>对比</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </volist>
+    </div>
 </block>
 
 <block name="appendJS">
