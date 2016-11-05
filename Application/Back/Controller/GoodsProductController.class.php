@@ -157,6 +157,22 @@ class GoodsProductController extends Controller{
             $m_product_option->addAll($product_option_data);
         }
 
+        //更新已经存在的货品信息
+        $goods_product_list = I('post.option', []);
+//        dump($goods_product_list);
+//        die;
+        foreach($goods_product_list as $goods_product_id=>$product) {
+            $product_data = [
+                'goods_product_id' => $goods_product_id,
+                'product_quantity' => $product['product_quantity'],
+                'product_price' => $product['product_price'],
+                'price_operate' => $product['price_operate'],
+                'enabled '=> isset($product['enabled'])? '1':'0',
+            ];
+
+            //更新数据即可
+            $m_goods_product->save($product_data);
+        }
         // 回到货品列表页面
         $this->redirect('list', ['goods_id'=>$goods_id], 0);
 
