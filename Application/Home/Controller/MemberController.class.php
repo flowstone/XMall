@@ -6,11 +6,11 @@
  * Time: 8:21 PM
  */
 namespace Home\Controller;
-use  Think\Controller;
+//use  Think\Controller;
 //use Think\Model;
 use Think\Verify;
 
-class MemberController extends  Controller {
+class MemberController extends  CommonController {
 
     //注册动作
     public function registerAction(){

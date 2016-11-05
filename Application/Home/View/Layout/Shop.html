@@ -7,21 +7,42 @@
                 <li>
                     <a href=""> <i class="fa fa-phone"></i>
                     </a>
-                    <span class="hidden-xs hidden-sm hidden-md">123456789</span>
+                    <span class="hidden-xs hidden-sm hidden-md">{:getConfig('shop_telephone', '000-00000000')}</span>
                 </li>
                 <li class="dropdown">
-                    <a href="" title="会员中心" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i>
-                        <span class="hidden-xs hidden-sm hidden-md">会员中心</span>
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li>
-                            <a href="">会员注册</a>
-                        </li>
-                        <li>
-                            <a href="">会员登录</a>
-                        </li>
-                    </ul>
+                    <if condition="$member" >
+                        <a href="" title="会员中心" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i>
+                            <span class="hidden-xs hidden-sm hidden-md">{$member['name']}</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li>
+                                <a href="{:U('/logout')}">退出</a>
+                            </li>
+                            <li>
+                                <a href="{:U('/center')}">我的帐户</a>
+                            </li>
+                            <li>
+                                <a href="{:U('/order')}">订单管理</a>
+                            </li>
+                            <li>
+                                <a href="{:U('/collection')}">我的收藏</a>
+                            </li>
+                        </ul>
+                        <else />
+                        <a href="" title="会员中心" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i>
+                            <span class="hidden-xs hidden-sm hidden-md">会员中心</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li>
+                                <a href="{:U('/register')}">会员注册</a>
+                            </li>
+                            <li>
+                                <a href="{:U('/login')}">会员登录</a>
+                            </li>
+                        </ul>
+                    </if>
                 </li>
                 <li>
                     <a href="" id="wishlist-total" title="收藏（0）">

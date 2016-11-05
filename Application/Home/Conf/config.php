@@ -10,6 +10,9 @@ return array(
         'login' => 'Member/login', //登陆
         'verify' => 'Member/verify', //验证码
         'logout' => 'Member/logout', //退出
+        'index' => 'Shop/index',
+        //路由
+        'goods/:goods_id\d' => 'Shop/goods',
     ],
     'LOAD_EXT_CONFIG'  => 'db',
     'SHOW_PAGE_TRACE'  => true,
