@@ -1,0 +1,93 @@
+<Extend name="Layout/Back" />
+
+<block name="content">
+<div id="content">
+    <div class="page-header">
+      <div class="container-fluid">
+        <div class="pull-right">
+          <button type="submit" form="form-Shipping" data-toggle="tooltip" title="保存" class="btn btn-primary">
+            <i class="fa fa-save"></i>
+          </button>
+          <a href="{:U('list')}" data-toggle="tooltip" title="取消" class="btn btn-default">
+            <i class="fa fa-reply"></i>
+          </a>
+        </div>
+        <h1>货运方式</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a href="{:U('Manage/index')}">首页</a>
+          </li>
+          <li>
+            <a href="">货运方式</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <i class="fa fa-pencil"></i>
+            添加货运方式
+          </h3>
+        </div>
+        <div class="panel-body">
+          <form action="{:U('edit')}" method="post" enctype="multipart/form-data" id="form-Shipping" class="form-horizontal">
+            <input type="hidden" name="shipping_id" value="{$row['shipping_id']}">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a href="#tab-general" data-toggle="tab">基本信息</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab-general">
+
+                                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-key">key</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="key" value="{$row['key']}" placeholder="key" id="input-key" class="form-control" />
+                  </div>
+                </div>                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-title">title</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="title" value="{$row['title']}" placeholder="title" id="input-title" class="form-control" />
+                  </div>
+                </div>                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-is_default">is_default</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="is_default" value="{$row['is_default']}" placeholder="is_default" id="input-is_default" class="form-control" />
+                  </div>
+                </div>                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-enabled">enabled</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="enabled" value="{$row['enabled']}" placeholder="enabled" id="input-enabled" class="form-control" />
+                  </div>
+                </div>                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-sort_number">sort_number</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="sort_number" value="{$row['sort_number']}" placeholder="sort_number" id="input-sort_number" class="form-control" />
+                  </div>
+                </div>
+   
+              </div>
+             
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</block>
+
+<block name="bottomJS">
+    <script src="__PUBLIC__/Back/validate/jquery.validate.min.js"></script>
+    <script src="__PUBLIC__/Back/validate/additional-methods.min.js"></script>
+    <script src="__PUBLIC__/Back/validate/localization/messages_zh.min.js"></script>
+
+    <script>
+    $(function() {
+        $('#form-Shipping').validate({});           
+    });
+
+    </script>
+</block>

@@ -1,0 +1,188 @@
+<extend name="Layout/Back" />
+
+<block name="content" >
+
+    <div id="content">
+        <div class="page-header">
+            <div class="container-fluid">
+                <div class="pull-right">
+                    <a href="{:U('add')}" data-toggle="tooltip" title="新增" class="btn btn-primary"> <i class="fa fa-plus"></i>
+                    </a>
+
+                    <button type="button" data-toggle="tooltip" title="删除" class="btn btn-danger" onclick="('input[name*=\'selected\']:checked').size()>0 && confirm('确认？') ? $('#form-Shipping').submit() : false;"> <i class="fa fa-trash-o"></i>
+                    </button>
+
+                </div>
+                <h1>货运方式管理</h1>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="{U('Manage/index')}">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">货运方式列表</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-list"></i>
+                        货运方式列表
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- <form action="{:U('list')}" method="GET">
+                    <div class="well">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label" for="input-field">搜索字段标题</label>
+                                    <input type="text" name="filter_field" value="{$filter['filter_field']}" placeholder="搜索字段标题" id="input-field" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="submit" id="button-filter" class="btn btn-primary pull-right">
+                                    <i class="fa fa-search"></i>
+                                    筛选
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    </form> -->
+
+                    <form action="{:U('multi')}" method="post" enctype="multipart/form-data" id="form-Shipping">
+                        <input type="hidden" id="input-operate_type" name="operate_type" value="">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <td style="width: 1px;" class="text-center">
+                                            <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" />
+                                        </td>                         
+                                                                                
+                                        <td class="text-left">
+                                        <if condition="$order['field'] eq 'shipping_id' AND $order['type'] eq 'asc'">
+                                            <a href="{:U('list', $filter+['field'=>'shipping_id', 'type'=>'desc'])}" class="asc">shipping_id</a>
+                                        <elseif condition="$order['field'] eq 'shipping_id' AND $order['type'] eq 'desc'" />
+                                            <a href="{:U('list', $filter+['field'=>'shipping_id', 'type'=>'asc'])}" class="desc">shipping_id</a>
+                                        <else />
+                                            <a href="{:U('list', $filter+['field'=>'shipping_id', 'type'=>'asc'])}" class="">shipping_id</a>
+                                        </if>
+                                        </td>
+                                                                                
+                                        <td class="text-left">
+                                        <if condition="$order['field'] eq 'key' AND $order['type'] eq 'asc'">
+                                            <a href="{:U('list', $filter+['field'=>'key', 'type'=>'desc'])}" class="asc">key</a>
+                                        <elseif condition="$order['field'] eq 'key' AND $order['type'] eq 'desc'" />
+                                            <a href="{:U('list', $filter+['field'=>'key', 'type'=>'asc'])}" class="desc">key</a>
+                                        <else />
+                                            <a href="{:U('list', $filter+['field'=>'key', 'type'=>'asc'])}" class="">key</a>
+                                        </if>
+                                        </td>
+                                                                                
+                                        <td class="text-left">
+                                        <if condition="$order['field'] eq 'title' AND $order['type'] eq 'asc'">
+                                            <a href="{:U('list', $filter+['field'=>'title', 'type'=>'desc'])}" class="asc">title</a>
+                                        <elseif condition="$order['field'] eq 'title' AND $order['type'] eq 'desc'" />
+                                            <a href="{:U('list', $filter+['field'=>'title', 'type'=>'asc'])}" class="desc">title</a>
+                                        <else />
+                                            <a href="{:U('list', $filter+['field'=>'title', 'type'=>'asc'])}" class="">title</a>
+                                        </if>
+                                        </td>
+                                                                                
+                                        <td class="text-left">
+                                        <if condition="$order['field'] eq 'is_default' AND $order['type'] eq 'asc'">
+                                            <a href="{:U('list', $filter+['field'=>'is_default', 'type'=>'desc'])}" class="asc">is_default</a>
+                                        <elseif condition="$order['field'] eq 'is_default' AND $order['type'] eq 'desc'" />
+                                            <a href="{:U('list', $filter+['field'=>'is_default', 'type'=>'asc'])}" class="desc">is_default</a>
+                                        <else />
+                                            <a href="{:U('list', $filter+['field'=>'is_default', 'type'=>'asc'])}" class="">is_default</a>
+                                        </if>
+                                        </td>
+                                                                                
+                                        <td class="text-left">
+                                        <if condition="$order['field'] eq 'enabled' AND $order['type'] eq 'asc'">
+                                            <a href="{:U('list', $filter+['field'=>'enabled', 'type'=>'desc'])}" class="asc">enabled</a>
+                                        <elseif condition="$order['field'] eq 'enabled' AND $order['type'] eq 'desc'" />
+                                            <a href="{:U('list', $filter+['field'=>'enabled', 'type'=>'asc'])}" class="desc">enabled</a>
+                                        <else />
+                                            <a href="{:U('list', $filter+['field'=>'enabled', 'type'=>'asc'])}" class="">enabled</a>
+                                        </if>
+                                        </td>
+                                                                                
+                                        <td class="text-left">
+                                        <if condition="$order['field'] eq 'sort_number' AND $order['type'] eq 'asc'">
+                                            <a href="{:U('list', $filter+['field'=>'sort_number', 'type'=>'desc'])}" class="asc">sort_number</a>
+                                        <elseif condition="$order['field'] eq 'sort_number' AND $order['type'] eq 'desc'" />
+                                            <a href="{:U('list', $filter+['field'=>'sort_number', 'type'=>'asc'])}" class="desc">sort_number</a>
+                                        <else />
+                                            <a href="{:U('list', $filter+['field'=>'sort_number', 'type'=>'asc'])}" class="">sort_number</a>
+                                        </if>
+                                        </td>
+                                        
+                                        <td class="text-right">管理</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <volist name="list_rows" id="row">
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" name="selected[]" value="{$row['shipping_id']}" />
+                                            </td>
+
+                                            <td class="text-left">{$row['shipping_id']}</td><td class="text-left">{$row['key']}</td><td class="text-left">{$row['title']}</td><td class="text-left">{$row['is_default']}</td><td class="text-left">{$row['enabled']}</td><td class="text-left">{$row['sort_number']}</td>
+
+                                            <td class="text-right">
+                                                <a href="{:U('edit', ['shipping_id'=>
+                                                    $row['shipping_id']])}" data-toggle="tooltip" title="编辑" class="btn btn-primary">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+
+                                                <a href="{:U('uninstall', ['key'=> $row['key']]
+                                                    )}" data-toggle="tooltip" title="编辑" class="btn btn-primary">
+                                                    UNINSTALL
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </volist>
+
+                                    <volist name="list_shipping_list" id="shipping">
+                                        <tr>
+                                            <td class="text-center">
+                                                <input type="checkbox" name="selected[]" value="{$row['shipping_id']}" />
+                                            </td>
+
+                                            <td class="text-left"></td>
+                                            <td class="text-left">{$shipping->key()}</td>
+                                            <td class="text-left">{$shipping->title()}</td>
+                                            <td class="text-left"></td>
+                                            <td class="text-left"></td>
+                                            <td class="text-left"></td>
+
+                                            <td class="text-right">
+                                                <!-- <a href="{:U('edit', ['shipping_id'=> 1]
+                                                    )}" data-toggle="tooltip" title="编辑" class="btn btn-primary">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a> -->
+                                                <a href="{:U('install', ['key'=> $shipping->key()]
+                                                    )}" data-toggle="tooltip" title="编辑" class="btn btn-primary">
+                                                    INSTALL
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </volist>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                    <div class="row">{$page_html}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
